@@ -2,7 +2,7 @@
  * API Client for Myntra Discovery Engine FastAPI Backend
  */
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+const API_BASE_URL = (process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000").replace(/\/+$/, "");
 
 export interface Theme {
   theme_id: string;
