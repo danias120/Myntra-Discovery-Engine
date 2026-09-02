@@ -37,17 +37,16 @@ from src.utils.rate_limiter import get_limiter
 logger = get_logger("llm_client")
 
 FALLBACK_MODELS: List[str] = [
-    "gemini-3.5-flash-lite",
-    "gemini-3.1-flash-lite",
-    "gemini-3.5-flash",
-    "gemini-3.6-flash",
+    "gemini-2.0-flash",
+    "gemini-1.5-flash",
+    "gemini-1.5-pro",
 ]
 
 
 class LLMClient:
     def __init__(self, provider: Optional[str] = None):
         self.provider = (provider or LLM_PROVIDER).lower()
-        self.gemini_model_name = "gemini-3.5-flash-lite"
+        self.gemini_model_name = GEMINI_MODEL or "gemini-2.0-flash"
         self.ollama_model_name = OLLAMA_MODEL
         self.limiter = get_limiter("gemini")
         self.cache = default_cache
