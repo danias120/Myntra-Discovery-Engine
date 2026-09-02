@@ -25,13 +25,13 @@ class RateLimiter:
         self.lock = threading.Lock()
 
     def acquire(self) -> None:
-        """Blocks if needed until a request slot is available under the rate limit."""
+        """Blocks only if the rolling 60s window exceeds RPM or daily quota is reached."""
         with self.lock:
             now = time.time()
             
             # Prune daily request timestamps older than 24h (86400s)
-            cutoff = now - 86400.0
-            self.daily_requests = [t for t in self.daily_requests if t > cutoff]
+            cutoff_day = now - 86400.0
+            self.daily_requests = [t for t in self.daily_requests if t > cutoff_day]
             
             if len(self.daily_requests) >= self.rpd:
                 oldest = self.daily_requests[0]
@@ -41,15 +41,18 @@ class RateLimiter:
                 )
                 raise RuntimeError(f"Daily request quota ({self.rpd}) exhausted.")
 
-            # Enforce RPM spacing
-            elapsed = now - self.last_request_time
-            if elapsed < self.interval:
-                sleep_time = self.interval - elapsed
-                logger.debug(f"Rate limiting: sleeping for {sleep_time:.2f}s")
+            # Enforce sliding 60-second RPM window without artificial fixed spacing
+            cutoff_minute = now - 60.0
+            minute_requests = [t for t in self.daily_requests if t > cutoff_minute]
+            if len(minute_requests) >= self.rpm:
+                oldest_min = minute_requests[0]
+                sleep_time = max(0.0, 60.0 - (now - oldest_min) + 0.1)
+                logger.info(f"Sliding RPM limit reached ({self.rpm}/min). Pausing {sleep_time:.2f}s...")
                 time.sleep(sleep_time)
+                now = time.time()
 
-            self.last_request_time = time.time()
-            self.daily_requests.append(self.last_request_time)
+            self.last_request_time = now
+            self.daily_requests.append(now)
 
     def get_status(self) -> Dict[str, int]:
         """Returns current quota status."""

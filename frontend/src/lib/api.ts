@@ -282,3 +282,67 @@ export async function askAIAnalyst(
 
   return await res.json();
 }
+
+export async function askAIAnalystStream(
+  query: string,
+  onToken: (token: string) => void,
+  onCitationMeta?: (meta: any) => void,
+  conversationHistory: { role: string; content: string }[] = [],
+  filterPlatform?: string
+): Promise<void> {
+  const payload: any = {
+    query,
+    top_k: 8,
+    stream: true,
+    conversation_history: conversationHistory,
+  };
+  if (filterPlatform && filterPlatform !== "All Sources") {
+    payload.filter_platform = filterPlatform.toLowerCase();
+  }
+
+  const res = await fetch(`${API_BASE_URL}/api/query`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(payload),
+  });
+
+  if (!res.ok) {
+    throw new Error(`API Query Error: ${res.statusText}`);
+  }
+
+  if (!res.body) {
+    throw new Error("No response body for streaming");
+  }
+
+  const reader = res.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+
+    buffer += decoder.decode(value, { stream: true });
+    const lines = buffer.split("\n\n");
+    buffer = lines.pop() || "";
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      if (!trimmed.startsWith("data:")) continue;
+      const dataStr = trimmed.replace(/^data:\s*/, "").trim();
+      if (dataStr === "[DONE]") {
+        return;
+      }
+      try {
+        const parsed = JSON.parse(dataStr);
+        if (parsed.type === "token" && parsed.content) {
+          onToken(parsed.content);
+        } else if (parsed.type === "citation_meta" && onCitationMeta) {
+          onCitationMeta(parsed);
+        }
+      } catch (e) {
+        // Ignore unparseable chunk
+      }
+    }
+  }
+}

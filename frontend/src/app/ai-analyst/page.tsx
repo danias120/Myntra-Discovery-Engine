@@ -13,7 +13,7 @@ import {
   RotateCcw,
   Loader2
 } from "lucide-react";
-import { askAIAnalyst, QueryResponse } from "@/lib/api";
+import { askAIAnalyst, askAIAnalystStream, QueryResponse } from "@/lib/api";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -78,32 +78,101 @@ export default function AIAnalystPage() {
     setInputValue("");
     setIsLoading(true);
 
+    const qLower = queryText.toLowerCase();
+    const isHypo = qLower.includes("hypothesis") || qLower.includes("hypotheses") || qLower.includes("supported") || qLower.includes("bookmark") || qLower.includes("discount");
+
+    let streamedText = "";
+    let assistantMessageIndex = -1;
+
     try {
       const history = messages.map((m) => ({ role: m.role, content: m.content }));
-      const response: QueryResponse = await askAIAnalyst(queryText, history);
 
-      const qLower = queryText.toLowerCase();
-      const isHypo = response.generation_metadata?.is_hypothesis_test || qLower.includes("hypothesis") || qLower.includes("hypotheses") || qLower.includes("supported") || qLower.includes("bookmark") || qLower.includes("discount");
+      await askAIAnalystStream(
+        queryText,
+        (token: string) => {
+          streamedText += token;
+          setIsLoading(false);
+          setMessages((prev) => {
+            if (assistantMessageIndex === -1) {
+              assistantMessageIndex = prev.length;
+              return [
+                ...prev,
+                {
+                  role: "assistant",
+                  content: streamedText,
+                  isHypothesis: isHypo,
+                },
+              ];
+            } else {
+              const updated = [...prev];
+              updated[assistantMessageIndex] = {
+                ...updated[assistantMessageIndex],
+                content: streamedText,
+              };
+              return updated;
+            }
+          });
+        },
+        (meta: any) => {
+          if (meta?.generation_metadata?.verdict) {
+            setMessages((prev) => {
+              if (assistantMessageIndex !== -1 && assistantMessageIndex < prev.length) {
+                const updated = [...prev];
+                updated[assistantMessageIndex] = {
+                  ...updated[assistantMessageIndex],
+                  verdict: meta.generation_metadata.verdict,
+                  isHypothesis: meta.generation_metadata.is_hypothesis_test || isHypo,
+                };
+                return updated;
+              }
+              return prev;
+            });
+          }
+        },
+        history
+      );
+    } catch (streamErr) {
+      console.warn("Streaming error, trying non-streaming fallback:", streamErr);
+      try {
+        const history = messages.map((m) => ({ role: m.role, content: m.content }));
+        const response: QueryResponse = await askAIAnalyst(queryText, history);
+        const finalContent = response.answer && response.answer.trim()
+          ? response.answer
+          : "Unable to generate an answer right now. Please try again.";
 
-      const finalContent = response.answer && response.answer.trim()
-        ? response.answer
-        : "Unable to generate an answer right now. Please try again.";
-
-      const assistantMessage: ChatMessage = {
-        role: "assistant",
-        content: finalContent,
-        isHypothesis: isHypo,
-        verdict: response.generation_metadata?.verdict,
-      };
-
-      setMessages((prev) => [...prev, assistantMessage]);
-    } catch (err) {
-      console.warn("Backend query error:", err);
-      const assistantMessage: ChatMessage = {
-        role: "assistant",
-        content: "Unable to generate an answer right now. Please try again.",
-      };
-      setMessages((prev) => [...prev, assistantMessage]);
+        if (assistantMessageIndex === -1) {
+          setMessages((prev) => [
+            ...prev,
+            {
+              role: "assistant",
+              content: finalContent,
+              isHypothesis: isHypo,
+              verdict: response.generation_metadata?.verdict,
+            },
+          ]);
+        } else {
+          setMessages((prev) => {
+            const updated = [...prev];
+            updated[assistantMessageIndex] = {
+              ...updated[assistantMessageIndex],
+              content: finalContent,
+              verdict: response.generation_metadata?.verdict,
+            };
+            return updated;
+          });
+        }
+      } catch (fallbackErr) {
+        console.warn("Non-streaming fallback error:", fallbackErr);
+        if (assistantMessageIndex === -1) {
+          setMessages((prev) => [
+            ...prev,
+            {
+              role: "assistant",
+              content: "Unable to generate an answer right now. Please try again.",
+            },
+          ]);
+        }
+      }
     } finally {
       setIsLoading(false);
     }

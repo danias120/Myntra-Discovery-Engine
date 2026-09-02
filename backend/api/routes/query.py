@@ -7,9 +7,7 @@ from __future__ import annotations
 import json
 from typing import Any, Dict, List, Optional
 
-from fastapi import APIRouter, HTTPException, Request
-from pydantic import BaseModel, Field
-from sse_starlette.sse import EventSourceResponse
+from fastapi.responses import StreamingResponse
 
 from src.rag.generator import answer_generator
 from src.rag.retriever import retriever
@@ -37,15 +35,19 @@ async def query_rag(req: QueryRequest):
         filter_dict = {"source_platform": plat_map.get(plat, plat)}
 
     if req.stream:
-        async def event_generator():
-            async for sse_event in answer_generator.generate_stream(
+        return StreamingResponse(
+            answer_generator.generate_stream(
                 query=req.query,
                 conversation_history=req.conversation_history,
                 filter_dict=filter_dict,
-            ):
-                yield sse_event
-
-        return EventSourceResponse(event_generator())
+            ),
+            media_type="text/event-stream",
+            headers={
+                "Cache-Control": "no-cache",
+                "Connection": "keep-alive",
+                "X-Accel-Buffering": "no",
+            },
+        )
 
     result = answer_generator.generate(
         query=req.query,
