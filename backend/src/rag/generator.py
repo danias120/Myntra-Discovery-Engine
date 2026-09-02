@@ -230,7 +230,7 @@ class AnswerGenerator:
             "citations": citations_list,
             "generation_metadata": {
                 "retrieved_count": len(context_snippets),
-                "model_name": "gemini-2.5-flash",
+                "model_name": getattr(self.llm_client, "gemini_model_name", "gemini-3.6-flash"),
                 "is_hypothesis_test": is_hypothesis,
                 "verdict": "[Insufficient Evidence]" if is_insufficient and is_hypothesis else "[Evaluated]" if is_hypothesis else None,
                 "execution_time_sec": elapsed,

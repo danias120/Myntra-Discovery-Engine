@@ -32,7 +32,7 @@ YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 # LLM Configuration
 LLM_PROVIDER = os.getenv("LLM_PROVIDER", "gemini").lower()
 OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "llama3")
-GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-2.0-flash")
+GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-3.6-flash")
 
 # Rate Limits (Gemini Free Tier)
 GEMINI_RPM = int(os.getenv("GEMINI_RPM", "15"))

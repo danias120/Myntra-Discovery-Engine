@@ -85,36 +85,23 @@ export default function AIAnalystPage() {
       const qLower = queryText.toLowerCase();
       const isHypo = response.generation_metadata?.is_hypothesis_test || qLower.includes("hypothesis") || qLower.includes("hypotheses") || qLower.includes("supported") || qLower.includes("bookmark") || qLower.includes("discount");
 
+      const finalContent = response.answer && response.answer.trim()
+        ? response.answer
+        : "Unable to generate an answer right now. Please try again.";
+
       const assistantMessage: ChatMessage = {
         role: "assistant",
-        content: response.answer,
+        content: finalContent,
         isHypothesis: isHypo,
         verdict: response.generation_metadata?.verdict,
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
     } catch (err) {
-      console.warn("Backend query error, using grounded fallback:", err);
-      const qLower = queryText.toLowerCase();
-      const isHypo = qLower.includes("hypothesis") || qLower.includes("is it true");
-
-      let fallbackAnswer = "";
-
-      if (qLower.includes("who") || qLower.includes("segment")) {
-        fallbackAnswer = `### **Shopper Segment Framework**\n\nBased on qualitative research across 2,065 customer records, Myntra wishlisters cluster into six distinct behavioral archetypes:\n\n* **Bargain Hunters (44.9% / 928 signals):** Medium–High intent; actively wait for 40%+ EORS price drops. [Source: Reddit]\n* **Well-Informed Scholars (35.5% / 734 signals):** High intent; research reviews and sizing charts extensively; blocked by fit ambiguity. [Source: App Store]\n* **Social Shoppers (21.8% / 450 signals):** Seek peer validation and unedited try-on photos before checkout. [Source: Quora]\n* **Determined Shoppers (18.0% / 372 signals):** High intent; purchase for upcoming events; frustrated by stockouts. [Source: Survey]\n* **Impulse Buyers (17.4% / 360 signals):** Use wishlist as a 7-day emotional buffer to prevent buyer remorse. [Source: Interview]\n* **Reluctant Shoppers (13.0% / 269 signals):** Overwhelmed by wishlist clutter and comparison fatigue. [Source: Google Play]`;
-      } else if (qLower.includes("celebrity") || qLower.includes("crypto") || qLower.includes("endorsement")) {
-        fallbackAnswer = `The customer research corpus (2,065 records) does not contain evidence to support or evaluate whether celebrity endorsements drive wishlist conversion. Customer discussions primarily center on product pricing, cross-brand sizing, and unedited customer review photos.`;
-      } else if (qLower.includes("all 16") || qLower.includes("full hypothesis") || qLower.includes("list all") || qLower.includes("hypotheses")) {
-        fallbackAnswer = `### **Priority Hypotheses**\n\n| ID | Hypothesis | Validation Score | Validation Status | Evidence |\n| :--- | :--- | :---: | :--- | :--- |\n| **H1** | Price-waiting hypothesis | 84% | SUPPORTED | 44.9% of corpus (928 signals) actively holds items 14–30 days for 40%+ EORS discount triggers. [Source: Reddit] |\n| **H2** | Segment-difference hypothesis | 82% | SUPPORTED | Wishlist behavior and conversion blockers diverge significantly across the 6 behavioral shopper archetypes. [Source: Survey] |\n| **H3** | Occasion hypothesis | 78% | SUPPORTED | Customers curate outfits for weddings, trips, and festivals weeks in advance, naturally delaying purchase. [Source: Quora] |\n| **H4** | Genuine-intent hypothesis | 78% | SUPPORTED | Evidence shows distinct dual-mode usage: ~30% high-intent payday staging vs casual aesthetic bookmarking. [Source: Survey] |\n| **H5** | Social-validation hypothesis | 76% | SUPPORTED | WhatsApp screenshot polling before checkout is prevalent among Social Shoppers (21.8% of signals). [Source: Reddit] |\n| **H6** | Comparison-friction hypothesis | 76% | SUPPORTED | Lack of an in-app side-by-side spec comparison tool causes evaluation fatigue and multi-tab drop-off. [Source: Reddit] |\n| **H7** | Real-world-appearance hypothesis | 74% | SUPPORTED | Customer reviews with daylight photos bridge studio lighting opacity doubts and reduce return anxiety. [Source: Google Play] |\n| **H8** | Out-of-sight hypothesis | 68% | PARTIALLY SUPPORTED | Desire decays after 14–30 days if items remain untouched at full price without proactive alerts. [Source: Interview] |\n| **H9** | Wishlist-clutter hypothesis | 65% | PARTIALLY SUPPORTED | 1,000-item cap accumulation and dead-stock clutter create visual fatigue and decision paralysis. [Source: App Store] |\n| **H10** | Notification-ineffectiveness hypothesis | — | INSUFFICIENT EVIDENCE | The qualitative corpus focuses on pricing and sizing; direct customer discussion on notification fatigue is limited. |\n\n### **Emergent Hypotheses**\n\n| ID | Hypothesis | Validation Score | Validation Status | Evidence |\n| :--- | :--- | :---: | :--- | :--- |\n| **NH1** | Evidence-over-information hypothesis | 86% | SUPPORTED | Shoppers require trusted UGC proof and unedited try-on photos rather than more static catalog text. |\n| **NH2** | Converging-signals hypothesis | 80% | SUPPORTED | Conversion spikes sharply when price drop, size availability, and occasion urgency align simultaneously. |\n| **NH3** | Barrier-specific intervention hypothesis | 79% | SUPPORTED | Sizing-anxious shoppers need fit badges; price-waiters need strike alerts; comparison shoppers need spec tables. |\n| **NH4** | Item-level intent hypothesis | 75% | SUPPORTED | The same user saves items for different reasons: workwear for payday, partywear for peer polling, and jackets for sales. |\n| **NH5** | Stage-of-decision hypothesis | 73% | SUPPORTED | Saved items reflect discovery, consideration, validation, and near-checkout holding stages. |\n| **NH6** | Relevance-over-size hypothesis | 71% | SUPPORTED | Wishlist size only creates friction when search, custom folders, and priority sorting are absent. |`;
-      } else {
-        fallbackAnswer = `### **Price-Waiting Hypothesis**\n\n**Validation Score**: 84%\n**Validation Status**: SUPPORTED\n\n**Why**:\nPrice drop sensitivity is empirically confirmed as the single largest reason items sit in wishlists without conversion (44.9% of corpus / 928 signals). Shoppers deliberately treat the wishlist as a discount tracker, waiting 14–30 days for 40%+ EORS sale triggers before moving items to cart.\n\n**Supporting Evidence**:\n* 928 records explicitly state delaying purchases until major sales or flash markdowns. [Source: Reddit]\n* High-intent shoppers cross-check coupon discounts across competing apps before checkout. [Source: Quora]`;
-      }
-
+      console.warn("Backend query error:", err);
       const assistantMessage: ChatMessage = {
         role: "assistant",
-        content: fallbackAnswer,
-        isHypothesis: isHypo,
-        verdict: isHypo ? "[Evaluated]" : undefined,
+        content: "Unable to generate an answer right now. Please try again.",
       };
       setMessages((prev) => [...prev, assistantMessage]);
     } finally {
