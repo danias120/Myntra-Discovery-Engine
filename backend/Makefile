@@ -35,6 +35,9 @@ rag-build:
 eval:
 	python -m src.rag.evaluator --report
 
+pii-sweep:
+	python src/cleaning/pii_sweep.py
+
 api-dev:
 	uvicorn api.main:app --reload --port 8000
 

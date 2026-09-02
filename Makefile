@@ -29,6 +29,9 @@ frontend-dev:
 eval:
 	cd backend && $(MAKE) eval
 
+pii-sweep:
+	cd backend && $(MAKE) pii-sweep
+
 ingest:
 	cd backend && $(MAKE) ingest
 
