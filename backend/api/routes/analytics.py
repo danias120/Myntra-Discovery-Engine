@@ -15,14 +15,36 @@ from fastapi import APIRouter, HTTPException, Query
 
 router = APIRouter(tags=["Analytics & Reports"])
 
-CORPUS_FILE = "data/clean/corpus.jsonl"
-THEMES_FILE = "data/clean/themes.json"
-MATRIX_FILE = "data/clean/opportunity_matrix.json"
-SCORES_FILE = "data/clean/opportunity_scores.json"
-SEGMENTS_FILE = "data/clean/segmented_opportunities.json"
-REPORT_FILE = "reports/opportunity_report.md"
-SEGMENT_REPORT_FILE = "reports/segment_view.md"
-RESEARCH_FINDINGS_FILE = "data/clean/research_findings.json"
+BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+PROJECT_ROOT = os.path.dirname(BACKEND_DIR)
+
+
+def _resolve_file(relative_backend_path: str, root_fallback_path: Optional[str] = None) -> str:
+    """
+    Robust multi-location file resolver for local dev, Docker, and Railway containers.
+    """
+    p1 = os.path.join(BACKEND_DIR, relative_backend_path)
+    if os.path.exists(p1):
+        return p1
+    if root_fallback_path:
+        p2 = os.path.join(PROJECT_ROOT, root_fallback_path)
+        if os.path.exists(p2):
+            return p2
+    if os.path.exists(relative_backend_path):
+        return os.path.abspath(relative_backend_path)
+    if root_fallback_path and os.path.exists(root_fallback_path):
+        return os.path.abspath(root_fallback_path)
+    return p1
+
+
+CORPUS_FILE = _resolve_file("data/clean/corpus.jsonl", "backend/data/clean/corpus.jsonl")
+THEMES_FILE = _resolve_file("data/clean/themes.json", "backend/data/clean/themes.json")
+MATRIX_FILE = _resolve_file("data/clean/opportunity_matrix.json", "backend/data/clean/opportunity_matrix.json")
+SCORES_FILE = _resolve_file("data/clean/opportunity_scores.json", "backend/data/clean/opportunity_scores.json")
+SEGMENTS_FILE = _resolve_file("data/clean/segmented_opportunities.json", "backend/data/clean/segmented_opportunities.json")
+REPORT_FILE = _resolve_file("reports/opportunity_report.md", "reports/opportunity_report.md")
+SEGMENT_REPORT_FILE = _resolve_file("reports/segment_view.md", "reports/segment_view.md")
+RESEARCH_FINDINGS_FILE = _resolve_file("data/clean/research_findings.json", "backend/data/clean/research_findings.json")
 
 _CORPUS_CACHE: List[Dict[str, Any]] = []
 

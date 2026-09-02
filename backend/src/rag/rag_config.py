@@ -17,6 +17,17 @@ from dataclasses import asdict, dataclass, field
 from typing import Any, Dict, Optional
 
 
+_BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_CHROMA_CANDIDATE = os.path.join(_BACKEND_DIR, "data", "chroma")
+if not os.path.exists(_CHROMA_CANDIDATE):
+    if os.path.exists("backend/data/chroma"):
+        _CHROMA_CANDIDATE = os.path.abspath("backend/data/chroma")
+    elif os.path.exists("data/chroma"):
+        _CHROMA_CANDIDATE = os.path.abspath("data/chroma")
+
+_RESOLVED_CHROMA_DIR = _CHROMA_CANDIDATE
+
+
 @dataclass
 class RAGConfig:
     """All retrieval, embedding, reranking, and generation settings in one place."""
@@ -29,7 +40,7 @@ class RAGConfig:
     NORMALIZE_EMBEDDINGS: bool = True
 
     # 2. Vector Store Settings
-    CHROMA_PERSIST_DIR: str = os.getenv("CHROMA_PERSIST_DIR", "data/chroma")
+    CHROMA_PERSIST_DIR: str = os.getenv("CHROMA_PERSIST_DIR", _RESOLVED_CHROMA_DIR)
     CORPUS_COLLECTION_NAME: str = "myntra_corpus_chunks"
     THEMES_COLLECTION_NAME: str = "myntra_theme_summaries"
 
