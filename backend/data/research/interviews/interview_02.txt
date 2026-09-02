@@ -1,0 +1,54 @@
+Interview Transcript: User 02 (Participant P02)
+Topic: Outfit Building, Gifting, Side-by-Side Comparison Hack, Notification Fatigue, and Clutter Paralysis
+
+Interviewer: Hi, thank you for joining the call. How are you?
+Shopper: I'm doing good.
+
+Interviewer: How do you usually shop for clothes? Online or offline?
+Shopper: I'm a very random/occasion-based purchaser. If there's an occasion coming up—like a wedding, function, or trip—that's when I purchase clothes. Mostly I do it online on Myntra and Ajio.
+
+Interviewer: Think of the most recent item you added to your wishlist.
+Shopper: When I want something but it's out of my budget right now, I add it and wait for price drops. But recently I put a bunch of items in my wishlist for gifting—I wanted to compare different gift options before buying.
+
+Interviewer: Do you use the wishlist for shopping for yourself as well?
+Shopper: Yes. For example, if I find a cool shirt, I'll think: let me see if I can make an outfit out of this. I don't have pants for it yet, so I put the shirt in my wishlist while searching for matching pants and shoes. Once I find all pieces, I order them together. Also, if shoes are expensive, I wait for a sale in the wishlist.
+
+Interviewer: What uncertainties do you face when adding items to wishlist?
+Shopper: 
+1. Real vs delivered look: I worry if what I see on screen is what actually arrives. I rely heavily on customer review photos because they are more accurate than model photos.
+2. Sizing uncertainty: I'm not always sure of my own measurements vs brand size charts.
+3. Outfit completeness: Finding jacket + pants + shoes that match before committing.
+
+Interviewer: When buying a gift, how do you use the wishlist?
+Shopper: I add candidate gifts to compare prices and verify sizes across Myntra, Ajio, Amazon, and other e-commerce apps before deciding.
+
+Interviewer: Have items in your wishlist gone unpurchased?
+Shopper: Plenty. I randomly add shoes or gift ideas for friends/family, but then forget I had them in my wishlist when the occasion comes.
+
+Interviewer: What is your wishlist to you personally?
+Shopper: It's a tracking and comparison tool—like a personal diary or note keeping everything I'm interested in purchasing in one place to track and compare.
+
+Interviewer: What would make you buy an item if the price never dropped?
+Shopper: 
+1. The right occasion (e.g. an alert 2 weeks before a festival like Eid for a wishlisted kurta).
+2. Accumulation of real customer photo reviews (e.g. jumping from 5 reviews to 300 verified photo reviews).
+3. Back-in-stock alert for my specific size (e.g. Medium).
+
+Interviewer: How do you evaluate sizing in reviews?
+Shopper: I look for customer reviews mentioning height and fit—e.g., if someone says "I am 5'9 and wearing size M", I can draw parallels to my own body and feel confident it will fit.
+
+Interviewer: Do you do external research before purchasing?
+Shopper: Yes, I compare prices across websites, read reviews on Reddit or Quora, or do Google searches to find the best quality and affordability.
+
+Interviewer: How do you compare 2-3 similar shirts in your wishlist?
+Shopper: I check brand quality, customer review photos, and price. I currently use a two-screen hack—I open two separate browser tabs of Myntra side-by-side on two screens to compare texture, reviews, and purchases! Most people don't have two screens, so having a side-by-side comparison feature inside the app would be fantastic.
+
+Interviewer: Are your app notifications turned on?
+Shopper: I keep them OFF because of spam and random promotional messages. If apps only sent relevant alerts—like my specific size back in stock, or an occasion reminder for a saved item—I would keep them on.
+
+Interviewer: What frustrates you about the current wishlist experience?
+Shopper: 
+1. Clutter & Old items: Items from 1-2 years ago pile up. My style and fashion taste have evolved, so old items become irrelevant and create visual clutter.
+2. Wishlist paralysis: Opening a wishlist with hundreds of old items is overwhelming and throws me off, causing me to abandon using the wishlist altogether.
+3. UI Layout: I want a full-screen view of wishlist items with large images rather than a cramped sidebar.
+4. Auto-filter by recency: Having an option to view only items added in the past 6 months would be much better.

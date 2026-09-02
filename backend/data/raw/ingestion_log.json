@@ -1,0 +1,29 @@
+{
+  "run_timestamp": "2026-08-30T16:24:38.968085+00:00",
+  "total_records_ingested": 5538,
+  "platform_counts": {
+    "appstore_2026-08": 623,
+    "forum_2026-08": 18,
+    "instagram_2026-08": 0,
+    "interviews": 101,
+    "myntra_reviews_2026-08": 7,
+    "playstore_2026-08": 227,
+    "quora_2026-08": 2014,
+    "reddit_2026-08": 2072,
+    "surveys": 440,
+    "youtube_2026-08": 36
+  },
+  "files_generated": [
+    "data/raw/appstore_2026-08.jsonl",
+    "data/raw/forum_2026-08.jsonl",
+    "data/raw/instagram_2026-08.jsonl",
+    "data/raw/interviews.jsonl",
+    "data/raw/myntra_reviews_2026-08.jsonl",
+    "data/raw/playstore_2026-08.jsonl",
+    "data/raw/quora_2026-08.jsonl",
+    "data/raw/reddit_2026-08.jsonl",
+    "data/raw/surveys.jsonl",
+    "data/raw/youtube_2026-08.jsonl"
+  ],
+  "errors": {}
+}

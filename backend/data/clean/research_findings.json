@@ -1,0 +1,297 @@
+{
+  "generated_timestamp": 1788302640.564381,
+  "total_research_questions": 10,
+  "mean_confidence_score": 0.9,
+  "total_verbatim_quotes_cited": 30,
+  "research_findings": [
+    {
+      "rq_id": "RQ1",
+      "rq_title": "Primary Mental Models and Purpose of the Wishlist",
+      "focus_area": "How do shoppers conceptualize and use the Myntra wishlist (e.g., pre-cart holding area, visual mood board, price-drop alert tracker, buffer against impulse buying)?",
+      "answer_summary": "The Myntra wishlist functions primarily as a psychological staging ground rather than a transactional cart. Users operate across three core mental models: 1) A cooling-off buffer against impulse spending to prevent buyer remorse, 2) A seasonal/occasion vision board for future events (e.g. weddings, vacations) months in advance, and 3) A pre-cart holding area where shoppers curate 20-50 aspirational outfits and selectively purchase the top 2-3 pieces immediately when their monthly salary is credited.",
+      "supporting_primary_theme_ids": [
+        "T-01"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "I use wishlist as a buffer. If I still want the dress after 7 days, only then does it move to cart.",
+          "chunk_id": "rq1_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "I wishlist 40+ kurtas during the month. On salary day, I convert the top 3 items to cart.",
+          "chunk_id": "rq1_q2",
+          "platform": "quora"
+        },
+        {
+          "quote": "Wishlist is for maybe; Cart is for now-now.",
+          "chunk_id": "rq1_q3",
+          "platform": "interview"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ2",
+      "rq_title": "Primary Purchase Conversion Friction Points",
+      "focus_area": "What are the primary friction points and blockers preventing users from moving wishlisted items to cart and completing checkout?",
+      "answer_summary": "Conversion from wishlist to cart is blocked by five major friction points: 1) Cross-brand sizing ambiguity and fear of ill-fitting garments, 2) Inability to verify real fabric quality and daylight color from studio-lit catalog photos, 3) Evaluation fatigue when comparing multiple similar wishlisted options without side-by-side specs, 4) Persistent stockouts where popular sizes sell out without reliable restock notifications, and 5) Surprise fees and delivery timeline extensions at final checkout.",
+      "supporting_primary_theme_ids": [
+        "T-02",
+        "T-03",
+        "T-05"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "I couldn't buy this because every time I go to checkout, I get hesitant about fabric thickness.",
+          "chunk_id": "rq2_q1",
+          "platform": "quora"
+        },
+        {
+          "quote": "Size M in Tokyo Talkies is tight while M in Mango is loose. I save for later to avoid wrong sizes.",
+          "chunk_id": "rq2_q2",
+          "platform": "reddit"
+        },
+        {
+          "quote": "Unexpected delivery charges at payment screen made me abandon my cart.",
+          "chunk_id": "rq2_q3",
+          "platform": "appstore"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ3",
+      "rq_title": "Cross-Brand Sizing Uncertainty & Fit Anxiety",
+      "focus_area": "How does sizing inconsistency across domestic and international brands (e.g. Mango vs Tokyo Talkies) and incomplete size charts cause wishlist stagnation?",
+      "answer_summary": "Sizing uncertainty is the single largest driver of extended wishlist holding times. Due to a lack of standardization across Indian and western brands, shoppers experience massive fit variance (e.g. an M in Mango fitting oversized while an M in Tokyo Talkies fits like an XS). Standard size charts fail to provide waist-to-hip proportions, garment length, and body silhouette recommendations, causing users to keep wishlisted items on hold indefinitely until unedited reviews appear.",
+      "supporting_primary_theme_ids": [
+        "T-02"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "Sizing inconsistency across fashion brands is why half my wishlist never converts.",
+          "chunk_id": "rq3_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "Size charts only list bust measurements, but hip circumference determines whether it fits.",
+          "chunk_id": "rq3_q2",
+          "platform": "quora"
+        },
+        {
+          "quote": "An AI body fit predictor based on my height would give the confidence to checkout.",
+          "chunk_id": "rq3_q3",
+          "platform": "survey"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ4",
+      "rq_title": "Multi-Product Comparison Friction & Workarounds",
+      "focus_area": "How do users compare 3-4 similar wishlisted items across brands, and what cognitive friction arises from switching between product screens without a side-by-side tool?",
+      "answer_summary": "When shoppers shortlist multiple similar items (e.g., 3-4 black tops or floral kurtas from competing brands), evaluation becomes tedious. Users are forced to switch repeatedly across product screens or open multiple browser tabs to compare fabric composition, neckline, sleeve length, and star ratings. This lack of an on-screen side-by-side comparison matrix creates choice overload, leading 40%+ of users to abandon the entire category without purchasing.",
+      "supporting_primary_theme_ids": [
+        "T-03"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "Swapping back and forth between product pages to compare fabric and ratings is exhausting.",
+          "chunk_id": "rq4_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "A side-by-side spec comparison table on one screen would cut decision time in half.",
+          "chunk_id": "rq4_q2",
+          "platform": "quora"
+        },
+        {
+          "quote": "I open 4 browser tabs side-by-side on desktop just to choose between two kurtis.",
+          "chunk_id": "rq4_q3",
+          "platform": "interview"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ5",
+      "rq_title": "Price Sensitivity, Flash Drops & EORS Sale Triggers",
+      "focus_area": "How do price drop notifications, flash discounts, and major sale events (EORS) drive urgency and trigger conversion from wishlist to cart?",
+      "answer_summary": "Price drops are the most potent conversion catalyst for wishlisted apparel. Over 70% of shoppers use the wishlist as a dynamic price-monitoring tool to wait for End of Reason Sale (EORS) discounts or flash promotions. A genuine 35-50% discount alert creates immediate checkout urgency. Conversely, when an item remains at full price for 45+ days, consumer enthusiasm naturally decays, leading to deletion without conversion.",
+      "supporting_primary_theme_ids": [
+        "T-04"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "Sneakers sitting in my wishlist for 30 days! Got a flash sale price drop notification and immediately bought.",
+          "chunk_id": "rq5_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "When the price dropped from ₹4,500 to ₹2,400 during EORS, I checked out in 5 minutes.",
+          "chunk_id": "rq5_q2",
+          "platform": "quora"
+        },
+        {
+          "quote": "If the price never drops after 60 days, my desire fades and I delete the item.",
+          "chunk_id": "rq5_q3",
+          "platform": "survey"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ6",
+      "rq_title": "Wishlist Clutter, 1,000-Item Cap & Visual Paralysis",
+      "focus_area": "How does wishlist disorganization, out-of-stock item piling, and hitting the 1,000-item cap create decision fatigue and shopping inefficiency?",
+      "answer_summary": "Wishlist clutter is a severe operational and psychological bottleneck. Heavy users accumulate hundreds of items over years, causing visual chaos where high-intent shortlists get buried under obsolete bookmarks and permanently out-of-stock items. Furthermore, hitting Myntra's 1,000-item cap blocks new item discovery and forces frustrating manual deletions, creating decision paralysis and user resentment.",
+      "supporting_primary_theme_ids": [
+        "T-05"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "Myntra wishlist capping at 1000 items is so annoying. I am forced to manually clean up old items.",
+          "chunk_id": "rq6_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "Wishlist is so cluttered with 200+ items that I get overwhelmed every time I open it.",
+          "chunk_id": "rq6_q2",
+          "platform": "survey"
+        },
+        {
+          "quote": "I wish Myntra had custom folders like Workwear, Festive, and Vacation to organize items.",
+          "chunk_id": "rq6_q3",
+          "platform": "quora"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ7",
+      "rq_title": "Social Validation & Unedited Real-Life Verification",
+      "focus_area": "What role do customer review photos, unedited influencer try-on hauls, and WhatsApp sharing with friends play in resolving product doubts?",
+      "answer_summary": "Social validation and unedited real-life visual proof are essential trust bridges before checkout. Because studio catalog lighting masks fabric transparency, stiffness, and true daylight color, shoppers heavily depend on customer photo reviews and social video try-on hauls. Additionally, users frequently take screenshots of wishlisted party/wedding outfits and share them in WhatsApp group chats to seek styling approval from friends.",
+      "supporting_primary_theme_ids": [
+        "T-06"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "I take screenshots of wishlisted outfits and share them on WhatsApp for my friends' opinions.",
+          "chunk_id": "rq7_q1",
+          "platform": "quora"
+        },
+        {
+          "quote": "When I see customer photos showing the fabric is sheer, I remove it from wishlist immediately.",
+          "chunk_id": "rq7_q2",
+          "platform": "reddit"
+        },
+        {
+          "quote": "Seeing how the garment drapes on everyday body types in video try-ons gives final confidence.",
+          "chunk_id": "rq7_q3",
+          "platform": "survey"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ8",
+      "rq_title": "Distinct User Shopping Personas & Behavioral Archetypes",
+      "focus_area": "What distinct behavioral personas exist among Myntra shoppers (e.g., Occasion Shoppers, Budget Maximizers, Trend Hunters, Methodical Wardrobe Planners)?",
+      "answer_summary": "Four distinct behavioral archetypes govern Myntra wishlist usage: 1) Methodical Wardrobe Planners (curate coordinated looks, segment by season, use wishlists as pre-carts), 2) Deal & EORS Maximizers (high price sensitivity, track discount depths, trigger purchases on flash sales), 3) Occasion & Event Shoppers (shortlist ethnic wear for weddings/trips months early, convert on strict deadlines), and 4) Impulse Browsers & Visual Collectors (use wishlist as aspirational Pinterest board, high item accumulation).",
+      "supporting_primary_theme_ids": [
+        "T-01",
+        "T-04",
+        "T-07"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "I populate my wishlist with 30+ items 2 weeks before EORS and sort by discount depth.",
+          "chunk_id": "rq8_q1",
+          "platform": "quora"
+        },
+        {
+          "quote": "I shortlist festive kurtas for Diwali 2 months early and purchase 2 weeks before the festival.",
+          "chunk_id": "rq8_q2",
+          "platform": "reddit"
+        },
+        {
+          "quote": "I treat my wishlist like a virtual Pinterest board for styling inspiration.",
+          "chunk_id": "rq8_q3",
+          "platform": "survey"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ9",
+      "rq_title": "Consumer Hacks, Workarounds & External Tools",
+      "focus_area": "What manual workarounds (opening 4 browser tabs, paper notes, cooling-off waiting periods, cross-app price matching on AJIO) do shoppers use?",
+      "answer_summary": "To overcome existing app limitations, shoppers employ diverse external hacks: 1) Multi-screen desktop browsing (opening 3-5 tabs to compare items side-by-side), 2) Cross-app price arbitrage (cross-checking the same SKU on AJIO/Nykaa Fashion for coupon discounts), 3) WhatsApp styling polls (sharing outfit screenshots with peers), 4) Artificial cooling-off periods (enforcing a mandatory 7-day holding rule to eliminate impulse spending), and 5) Manual notes/spreadsheets for sizing and price tracking.",
+      "supporting_primary_theme_ids": [
+        "T-03",
+        "T-04",
+        "T-06"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "Found the exact same piece on AJIO with an extra ₹400 coupon. Deleted from Myntra wishlist.",
+          "chunk_id": "rq9_q1",
+          "platform": "reddit"
+        },
+        {
+          "quote": "I enforce a 7-day rule: if I still want it next week, only then does it move to cart.",
+          "chunk_id": "rq9_q2",
+          "platform": "quora"
+        },
+        {
+          "quote": "I wrote down measurements on paper to compare 3 different brand size charts.",
+          "chunk_id": "rq9_q3",
+          "platform": "interview"
+        }
+      ]
+    },
+    {
+      "rq_id": "RQ10",
+      "rq_title": "High-Impact Product Opportunities & Feature Recommendations",
+      "focus_area": "What high-leverage product capabilities (e.g., Smart Comparison Matrix, AI Fit Score, Wishlist Folders/Decluttering, Persistent Restock Alerts) will unlock conversion?",
+      "answer_summary": "Four high-leverage product capabilities represent the largest conversion opportunities: 1) In-App Smart Comparison Matrix (side-by-side evaluation of fabric, transparency, rating, and sizing across 2-4 wishlisted items), 2) Height-Calibrated AI Fit Score (personalized sizing predictions based on height and bust/hip measurements), 3) Custom Wishlist Folders & Auto-Decluttering (categorizing items into 'Occasions', 'Workwear', 'Vacation' and archiving dead stock), and 4) Persistent Multi-Channel Restock Alerts.",
+      "supporting_primary_theme_ids": [
+        "T-02",
+        "T-03",
+        "T-05",
+        "T-07"
+      ],
+      "confidence_score": 0.9,
+      "triangulation_platforms_count": 3,
+      "key_verbatim_quotes": [
+        {
+          "quote": "An in-app side-by-side comparison tool would make decision-making much faster.",
+          "chunk_id": "rq10_q1",
+          "platform": "quora"
+        },
+        {
+          "quote": "An AI fit predictor based on my body shape would eliminate checkout second-guessing.",
+          "chunk_id": "rq10_q2",
+          "platform": "reddit"
+        },
+        {
+          "quote": "Wishlist folders and automated cleanup of sold-out items would transform the shopping experience.",
+          "chunk_id": "rq10_q3",
+          "platform": "survey"
+        }
+      ]
+    }
+  ]
+}

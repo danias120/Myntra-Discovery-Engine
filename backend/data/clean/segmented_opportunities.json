@@ -1,0 +1,666 @@
+{
+  "generated_timestamp": 1788302645.244683,
+  "total_themes_sliced": 10,
+  "sample_size_rules": {
+    "high_confidence_threshold": ">= 10 chunks",
+    "low_confidence_threshold": "5-9 chunks",
+    "excluded_threshold": "< 5 chunks"
+  },
+  "segmented_opportunities": [
+    {
+      "theme_id": "T-01",
+      "theme_name": "Price Drop Sensitivity & EORS Sale Triggers",
+      "total_supporting_chunks_evaluated": 604,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 93,
+          "share_pct": 38.3,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 54,
+          "share_pct": 22.2,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 35,
+          "share_pct": 14.4,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 18,
+          "share_pct": 7.4,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 38,
+          "share_pct": 15.6,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 5,
+          "share_pct": 2.1,
+          "confidence": "low_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 15,
+          "share_pct": 30.0,
+          "confidence": "high_confidence"
+        },
+        "500_1000": {
+          "count": 16,
+          "share_pct": 32.0,
+          "confidence": "high_confidence"
+        },
+        "above_3000": {
+          "count": 18,
+          "share_pct": 36.0,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 31,
+          "share_pct": 27.7,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 81,
+          "share_pct": 72.3,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-02",
+      "theme_name": "Cross-Brand Sizing Uncertainty & Fit Anxiety",
+      "total_supporting_chunks_evaluated": 584,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "500_1000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 127,
+          "share_pct": 34.1,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 66,
+          "share_pct": 17.7,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 36,
+          "share_pct": 9.7,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 24,
+          "share_pct": 6.5,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 97,
+          "share_pct": 26.1,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 22,
+          "share_pct": 5.9,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "500_1000": {
+          "count": 5,
+          "share_pct": 166.7,
+          "confidence": "low_confidence"
+        },
+        "under_500": {
+          "count": 5,
+          "share_pct": 166.7,
+          "confidence": "low_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 16,
+          "share_pct": 22.2,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 56,
+          "share_pct": 77.8,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-03",
+      "theme_name": "Social Validation & Unedited Real-Life Photo Proof",
+      "total_supporting_chunks_evaluated": 258,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "under_500",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 50,
+          "share_pct": 38.5,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 35,
+          "share_pct": 26.9,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 11,
+          "share_pct": 8.5,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 10,
+          "share_pct": 7.7,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 22,
+          "share_pct": 16.9,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 5,
+          "share_pct": 83.3,
+          "confidence": "low_confidence"
+        },
+        "above_3000": {
+          "count": 5,
+          "share_pct": 83.3,
+          "confidence": "low_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 9,
+          "share_pct": 36.0,
+          "confidence": "low_confidence"
+        },
+        "occasion": {
+          "count": 16,
+          "share_pct": 64.0,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-04",
+      "theme_name": "Competitor Cross-App Arbitrage & Price Matching (AJIO, Nykaa, Zara)",
+      "total_supporting_chunks_evaluated": 800,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 141,
+          "share_pct": 32.6,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 78,
+          "share_pct": 18.0,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 52,
+          "share_pct": 12.0,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 26,
+          "share_pct": 6.0,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 115,
+          "share_pct": 26.6,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 21,
+          "share_pct": 4.8,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 16,
+          "share_pct": 32.0,
+          "confidence": "high_confidence"
+        },
+        "500_1000": {
+          "count": 16,
+          "share_pct": 32.0,
+          "confidence": "high_confidence"
+        },
+        "above_3000": {
+          "count": 17,
+          "share_pct": 34.0,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 41,
+          "share_pct": 34.5,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 78,
+          "share_pct": 65.5,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-05",
+      "theme_name": "Wishlist as Pre-Cart & Impulse Cooling-Off Buffer",
+      "total_supporting_chunks_evaluated": 1058,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 310,
+          "share_pct": 39.5,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 174,
+          "share_pct": 22.2,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 84,
+          "share_pct": 10.7,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 62,
+          "share_pct": 7.9,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 138,
+          "share_pct": 17.6,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 17,
+          "share_pct": 2.2,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 16,
+          "share_pct": 44.4,
+          "confidence": "high_confidence"
+        },
+        "above_3000": {
+          "count": 20,
+          "share_pct": 55.6,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 50,
+          "share_pct": 21.6,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 182,
+          "share_pct": 78.4,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-06",
+      "theme_name": "Side-by-Side Multi-Product Comparison Friction",
+      "total_supporting_chunks_evaluated": 468,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "under_500",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 47,
+          "share_pct": 39.8,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 25,
+          "share_pct": 21.2,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 13,
+          "share_pct": 11.0,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 11,
+          "share_pct": 9.3,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 18,
+          "share_pct": 15.3,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 15,
+          "share_pct": 46.9,
+          "confidence": "high_confidence"
+        },
+        "500_1000": {
+          "count": 12,
+          "share_pct": 37.5,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 8,
+          "share_pct": 21.6,
+          "confidence": "low_confidence"
+        },
+        "occasion": {
+          "count": 29,
+          "share_pct": 78.4,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-07",
+      "theme_name": "Event Planning Horizons & Size Stock-Out Anxiety",
+      "total_supporting_chunks_evaluated": 630,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 123,
+          "share_pct": 42.3,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 62,
+          "share_pct": 21.3,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 22,
+          "share_pct": 7.6,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 24,
+          "share_pct": 8.2,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 50,
+          "share_pct": 17.2,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 10,
+          "share_pct": 3.4,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "above_3000": {
+          "count": 5,
+          "share_pct": 500.0,
+          "confidence": "low_confidence"
+        },
+        "under_500": {
+          "count": 5,
+          "share_pct": 500.0,
+          "confidence": "low_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 13,
+          "share_pct": 11.2,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 103,
+          "share_pct": 88.8,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-08",
+      "theme_name": "Visual Clutter Paralysis & Wishlist Maintenance (1,000-Item Cap)",
+      "total_supporting_chunks_evaluated": 1178,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 319,
+          "share_pct": 39.6,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 177,
+          "share_pct": 22.0,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 87,
+          "share_pct": 10.8,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 63,
+          "share_pct": 7.8,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 142,
+          "share_pct": 17.6,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 17,
+          "share_pct": 2.1,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 18,
+          "share_pct": 47.4,
+          "confidence": "high_confidence"
+        },
+        "above_3000": {
+          "count": 20,
+          "share_pct": 52.6,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 53,
+          "share_pct": 22.1,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 187,
+          "share_pct": 77.9,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-09",
+      "theme_name": "Desire Decay, Novelty Fading & Stale Wishlist Forgetting",
+      "total_supporting_chunks_evaluated": 1051,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 310,
+          "share_pct": 39.5,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 174,
+          "share_pct": 22.2,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 84,
+          "share_pct": 10.7,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 62,
+          "share_pct": 7.9,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 138,
+          "share_pct": 17.6,
+          "confidence": "high_confidence"
+        },
+        "accessories": {
+          "count": 17,
+          "share_pct": 2.2,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "under_500": {
+          "count": 16,
+          "share_pct": 45.7,
+          "confidence": "high_confidence"
+        },
+        "above_3000": {
+          "count": 19,
+          "share_pct": 54.3,
+          "confidence": "high_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 50,
+          "share_pct": 21.6,
+          "confidence": "high_confidence"
+        },
+        "occasion": {
+          "count": 182,
+          "share_pct": 78.4,
+          "confidence": "high_confidence"
+        }
+      }
+    },
+    {
+      "theme_id": "T-10",
+      "theme_name": "Social Reassurance Delays & Off-Platform Peer Validation",
+      "total_supporting_chunks_evaluated": 263,
+      "dominant_segments": {
+        "top_category": "women_western",
+        "top_price_band": "above_3000",
+        "top_occasion": "occasion"
+      },
+      "category_breakdown": {
+        "women_western": {
+          "count": 58,
+          "share_pct": 31.9,
+          "confidence": "high_confidence"
+        },
+        "women_ethnic": {
+          "count": 35,
+          "share_pct": 19.2,
+          "confidence": "high_confidence"
+        },
+        "men_casual": {
+          "count": 18,
+          "share_pct": 9.9,
+          "confidence": "high_confidence"
+        },
+        "men_formal": {
+          "count": 12,
+          "share_pct": 6.6,
+          "confidence": "high_confidence"
+        },
+        "footwear": {
+          "count": 56,
+          "share_pct": 30.8,
+          "confidence": "high_confidence"
+        }
+      },
+      "price_tier_breakdown": {
+        "above_3000": {
+          "count": 5,
+          "share_pct": 166.7,
+          "confidence": "low_confidence"
+        },
+        "under_500": {
+          "count": 5,
+          "share_pct": 166.7,
+          "confidence": "low_confidence"
+        }
+      },
+      "occasion_breakdown": {
+        "everyday": {
+          "count": 9,
+          "share_pct": 30.0,
+          "confidence": "low_confidence"
+        },
+        "occasion": {
+          "count": 21,
+          "share_pct": 70.0,
+          "confidence": "high_confidence"
+        }
+      }
+    }
+  ]
+}

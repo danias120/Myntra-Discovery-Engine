@@ -1,0 +1,81 @@
+{
+  "pipeline_run_timestamp": "2026-08-30T16:49:04.987268+00:00",
+  "execution_time_sec": 60.59,
+  "timings_by_stage_sec": {
+    "pii_stripping_sec": 39.286,
+    "spam_filtering_sec": 0.551,
+    "relevance_filtering_sec": 0.978,
+    "deduplication_sec": 19.608,
+    "chunking_sec": 0.126,
+    "total_pipeline_sec": 60.59
+  },
+  "input_summary": {
+    "total_raw_records": 5538,
+    "platform_breakdown": {
+      "appstore_2026-08": 623,
+      "forum_2026-08": 18,
+      "instagram_2026-08": 0,
+      "interviews": 101,
+      "myntra_reviews_2026-08": 7,
+      "playstore_2026-08": 227,
+      "quora_2026-08": 2014,
+      "reddit_2026-08": 2072,
+      "surveys": 440,
+      "youtube_2026-08": 36
+    }
+  },
+  "stage_statistics": {
+    "pii_stripper": {
+      "records_processed": 5538,
+      "pii_redacted": true
+    },
+    "spam_filter": {
+      "total_processed": 5538,
+      "passed": 5535,
+      "dropped_length": 3,
+      "dropped_spam": 0,
+      "dropped_gibberish": 0
+    },
+    "relevance_filter": {
+      "total_evaluated": 5535,
+      "passed_tier1": 4016,
+      "passed_tier2": 538,
+      "passed_research_exempt": 541,
+      "dropped_out_of_scope": 0,
+      "dropped_insufficient_signal": 440
+    },
+    "deduplicator": {
+      "total_evaluated": 5095,
+      "exact_duplicates_removed": 621,
+      "near_duplicates_merged": 2410,
+      "unique_records_retained": 2064
+    },
+    "chunker": {
+      "total_records_chunked": 2064,
+      "single_chunk_records": 2063,
+      "multi_chunk_records": 1,
+      "total_chunks_produced": 2065
+    }
+  },
+  "output_summary": {
+    "total_clean_chunks": 2065,
+    "output_platform_breakdown": {
+      "appstore": 185,
+      "interview": 96,
+      "myntra_reviews": 7,
+      "playstore": 133,
+      "quora": 486,
+      "reddit": 982,
+      "survey": 174,
+      "youtube": 2
+    },
+    "word_count_distribution": {
+      "min": 3,
+      "max": 320,
+      "mean": 38.02,
+      "median": 35,
+      "p95": 68.0
+    },
+    "clean_corpus_path": "data/clean/corpus.jsonl"
+  }
+}

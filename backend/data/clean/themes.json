@@ -1,0 +1,1415 @@
+{
+  "generated_timestamp": 1788302627.9347599,
+  "total_primary_themes": 10,
+  "total_sub_themes": 30,
+  "total_evidence_items_represented": 2240,
+  "primary_themes": [
+    {
+      "theme_id": "T-01",
+      "name": "Price Drop Sensitivity & EORS Sale Triggers",
+      "description": "Wishlist usage as a passive price-monitoring tracker where items sit for 30-60 days waiting for flash price drops and EORS discounts.",
+      "affected_shopping_stages": [
+        "consideration",
+        "purchase_decision"
+      ],
+      "total_evidence_count": 1959,
+      "sentiment_distribution": {
+        "positive": 628,
+        "negative": 840,
+        "neutral": 482,
+        "mixed": 9
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-1.1",
+          "name": "Discount Threshold Waiting (40%+ Drops)",
+          "description": "Shoppers refusing to checkout at full MRP, keeping items wishlisted until deep discounts trigger conversion.",
+          "category": "decision_trigger",
+          "frequency_count": 641,
+          "sentiment_distribution": {
+            "positive": 213,
+            "negative": 263,
+            "neutral": 162,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-1.2",
+          "name": "Price Stagnation Causing Checkout Freezes",
+          "description": "Items with stagnant prices remaining untouched for months until natural interest fades away.",
+          "category": "friction_point",
+          "frequency_count": 658,
+          "sentiment_distribution": {
+            "positive": 206,
+            "negative": 291,
+            "neutral": 158,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Awesome looking dress at low price",
+              "chunk_id": "55cf58da-d09d-4f23-860f-3fb4e146cdd0_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "got this lowest price only at Mintra store",
+              "chunk_id": "8d9c3158-de6f-4902-b6e8-7ecce52d93d8_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-1.3",
+          "name": "Demand for Personalized Target Strike-Price Alerts",
+          "description": "Desire for explicit price-drop alerts where users specify their target price (e.g. 'Alert me when under ₹1,499').",
+          "category": "feature_request",
+          "frequency_count": 660,
+          "sentiment_distribution": {
+            "positive": 209,
+            "negative": 286,
+            "neutral": 162,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Awesome looking dress at low price",
+              "chunk_id": "55cf58da-d09d-4f23-860f-3fb4e146cdd0_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "got this lowest price only at Mintra store",
+              "chunk_id": "8d9c3158-de6f-4902-b6e8-7ecce52d93d8_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-02",
+      "name": "Cross-Brand Sizing Uncertainty & Fit Anxiety",
+      "description": "Inconsistent size charts across international and domestic brands (e.g. Mango vs Tokyo Talkies) creating severe return hesitation.",
+      "affected_shopping_stages": [
+        "evaluation",
+        "purchase_decision"
+      ],
+      "total_evidence_count": 2023,
+      "sentiment_distribution": {
+        "positive": 161,
+        "negative": 1496,
+        "neutral": 359,
+        "mixed": 7
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-2.1",
+          "name": "Brand-to-Brand Sizing Inconsistency",
+          "description": "Wearing Medium in one brand while another brand's Medium fits like an XS, destroying size confidence.",
+          "category": "friction_point",
+          "frequency_count": 584,
+          "sentiment_distribution": {
+            "positive": 30,
+            "negative": 448,
+            "neutral": 104,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "Nice quality Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "got this lowest price only at Mintra store",
+              "chunk_id": "8d9c3158-de6f-4902-b6e8-7ecce52d93d8_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Fitting is perfect",
+              "chunk_id": "fe39a763-2116-4273-a3d9-0101835d6db4_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-2.2",
+          "name": "Incomplete Size Charts & Missing Body Proportions",
+          "description": "Size charts providing only bust measurements while omitting waist-to-hip proportions, garment length, and body silhouette recommendations.",
+          "category": "friction_point",
+          "frequency_count": 841,
+          "sentiment_distribution": {
+            "positive": 94,
+            "negative": 593,
+            "neutral": 151,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "Nice quality Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "got this lowest price only at Mintra store",
+              "chunk_id": "8d9c3158-de6f-4902-b6e8-7ecce52d93d8_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Fitting is perfect",
+              "chunk_id": "fe39a763-2116-4273-a3d9-0101835d6db4_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-2.3",
+          "name": "Demand for Height-Calibrated AI Fit Scores",
+          "description": "Desire for body fit scores, virtual try-on, and unedited customer try-on reviews based on user height and body type.",
+          "category": "feature_request",
+          "frequency_count": 598,
+          "sentiment_distribution": {
+            "positive": 37,
+            "negative": 455,
+            "neutral": 104,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "Nice quality Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "got this lowest price only at Mintra store",
+              "chunk_id": "8d9c3158-de6f-4902-b6e8-7ecce52d93d8_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Original brand ♥️💯",
+              "chunk_id": "2bc87d74-dd6f-44f6-8ec7-3eb7f25c9895_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Fitting is perfect",
+              "chunk_id": "fe39a763-2116-4273-a3d9-0101835d6db4_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-03",
+      "name": "Social Validation & Unedited Real-Life Photo Proof",
+      "description": "Studio lighting and heavily edited model photos creating deep suspicion about actual fabric colors, drape, and sheerness.",
+      "affected_shopping_stages": [
+        "evaluation"
+      ],
+      "total_evidence_count": 1445,
+      "sentiment_distribution": {
+        "positive": 223,
+        "negative": 877,
+        "neutral": 340,
+        "mixed": 5
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-3.1",
+          "name": "Discrepancy Between Studio Photos and Real Daylight",
+          "description": "Colors and fabric sheen appearing vibrant in catalog photos but dull, synthetic, or sheer in real life.",
+          "category": "friction_point",
+          "frequency_count": 426,
+          "sentiment_distribution": {
+            "positive": 38,
+            "negative": 304,
+            "neutral": 83,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now losing its charm I have been using myntra since its launch , I bought each and every garment, accessories, cloths etc from this particular application but from past one year myntra had disappointed me by its quality, service, and every time they send me wrong produc",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now dealing in cheap and low quality products also this is the main reason we are suffering For sure I am going to quit myntra now",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Best quality Always prefer myntra",
+              "chunk_id": "5f885364-ddbb-46e4-b75d-6ce0c80691fb_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Great quality products 👍 👍 Great quality product",
+              "chunk_id": "f59cf9f9-8007-4a82-a931-be79a8f7f167_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-3.2",
+          "name": "Reliance on Unedited Customer Review Photos",
+          "description": "Shoppers refusing to checkout until they find real customer review photos with height and weight details.",
+          "category": "decision_trigger",
+          "frequency_count": 449,
+          "sentiment_distribution": {
+            "positive": 66,
+            "negative": 288,
+            "neutral": 93,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "Review for my college back Using it for 4 years still my college bag is in the best quality",
+              "chunk_id": "85ab17f9-cc45-4fe2-b4d7-762a9d000f91_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "there was no clear mention of any ₹50 return fee.",
+              "chunk_id": "b440b148-8565-4cc0-9834-485826edb5b9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "asked customer service about the refund and they told me the same thing that the problem would be resolved by 24 hrs",
+              "chunk_id": "e73174f5-3575-4e94-9762-7fbd3f94d6ec_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "A good one stop shopping app for everything you need for home to wear and comfort",
+              "chunk_id": "3cd68427-bf40-45ae-9d30-aa63c74fd920_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-3.3",
+          "name": "Peer Approval Dependency Before High-Ticket Purchases",
+          "description": "Seeking reassurance from friends and family on WhatsApp before committing to dresses or ethnic sets >₹2,000.",
+          "category": "mental_model",
+          "frequency_count": 570,
+          "sentiment_distribution": {
+            "positive": 119,
+            "negative": 285,
+            "neutral": 164,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Whatever products we order from Myntra are very good quality , specially clothes",
+              "chunk_id": "e3ffb6c6-0c32-4a25-b6ae-f9da059ef8ba_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "A good one stop shopping app for everything you need for home to wear and comfort",
+              "chunk_id": "3cd68427-bf40-45ae-9d30-aa63c74fd920_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "It’s a very good experience, a wonderful product and high-quality products",
+              "chunk_id": "cf9d568a-6696-417f-9de2-e5e373572d01_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Check reviews and descriptions carefully",
+              "chunk_id": "a9c0b680-eda2-43f9-9c6b-88977dddbf84_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-04",
+      "name": "Competitor Cross-App Arbitrage & Price Matching (AJIO, Nykaa, Zara)",
+      "description": "Shoppers use Myntra's superior search UI to discover and wishlist items, but purchase them on competitor platforms offering cheaper coupons.",
+      "affected_shopping_stages": [
+        "consideration",
+        "evaluation"
+      ],
+      "total_evidence_count": 2522,
+      "sentiment_distribution": {
+        "positive": 548,
+        "negative": 1334,
+        "neutral": 629,
+        "mixed": 11
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-4.1",
+          "name": "Cross-Checking SKU Codes on AJIO, Nykaa, and Amazon",
+          "description": "Copy-pasting product titles across other apps to find ₹200-₹500 discounts or better bank offers.",
+          "category": "workaround",
+          "frequency_count": 805,
+          "sentiment_distribution": {
+            "positive": 174,
+            "negative": 421,
+            "neutral": 207,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Worst experience I had a worst experience with myntra, i had placed an order for the shoes, apparently the delivery partner tried to scam and I have not received the product yet",
+              "chunk_id": "f4fef9d2-0a98-4f65-b1ea-561e4f52848b_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-4.2",
+          "name": "Platform Switching for Free Shipping & Better Coupons",
+          "description": "Abandoning Myntra carts when handling fees or delivery charges make the total higher than competing platforms.",
+          "category": "friction_point",
+          "frequency_count": 886,
+          "sentiment_distribution": {
+            "positive": 196,
+            "negative": 469,
+            "neutral": 216,
+            "mixed": 5
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "There are many options in clothes, shoes and accessories for boys, girls and kids",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-4.3",
+          "name": "Demand for Automatic In-App Price Match Guarantees",
+          "description": "User requests for instant price matching against other major fashion e-commerce apps.",
+          "category": "feature_request",
+          "frequency_count": 831,
+          "sentiment_distribution": {
+            "positive": 178,
+            "negative": 444,
+            "neutral": 206,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra love I really excited for first order discount price please shopping in this app❤️",
+              "chunk_id": "6a2c2c3e-e021-4873-8b61-18b8b82c47a5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My forever purchasing app Best app for gud quality products + reasonable price",
+              "chunk_id": "ca1fc060-a676-4681-a0d7-9e5908ef96b5_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Worst experience I had a worst experience with myntra, i had placed an order for the shoes, apparently the delivery partner tried to scam and I have not received the product yet",
+              "chunk_id": "f4fef9d2-0a98-4f65-b1ea-561e4f52848b_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-05",
+      "name": "Wishlist as Pre-Cart & Impulse Cooling-Off Buffer",
+      "description": "Shoppers intentionally park fashion items in the wishlist for 7-14 days to let initial impulse enthusiasm cool down and maintain monthly budget discipline.",
+      "affected_shopping_stages": [
+        "discovery",
+        "consideration"
+      ],
+      "total_evidence_count": 3263,
+      "sentiment_distribution": {
+        "positive": 644,
+        "negative": 1759,
+        "neutral": 860,
+        "mixed": 0
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-5.1",
+          "name": "Intentional Impulse Purchase Cooling-Off",
+          "description": "Holding items for 7-14 days to test whether the desire is lasting or just a momentary late-night shopping impulse.",
+          "category": "mental_model",
+          "frequency_count": 1115,
+          "sentiment_distribution": {
+            "positive": 226,
+            "negative": 599,
+            "neutral": 290,
+            "mixed": 0
+          },
+          "representative_quotes": [
+            {
+              "quote": "One of the best shopping app I loved the quality of the products that I have purchased till date",
+              "chunk_id": "767bfc55-b460-4e89-a2d2-a27b588afba9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I loved the quality of the products that I have purchased till date",
+              "chunk_id": "767bfc55-b460-4e89-a2d2-a27b588afba9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "It was so good experience shopping here.",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Fashion Good app for purchase and quality is good",
+              "chunk_id": "5e7d3a32-d656-458f-bc19-b81d0d3d6c86_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-5.2",
+          "name": "Pre-Cart Salary-Day Staging & Budget Pacing",
+          "description": "Accumulating 20-50 wishlisted garments throughout the month to convert the top 2-3 pieces immediately when salary is credited.",
+          "category": "mental_model",
+          "frequency_count": 1079,
+          "sentiment_distribution": {
+            "positive": 211,
+            "negative": 581,
+            "neutral": 287,
+            "mixed": 0
+          },
+          "representative_quotes": [
+            {
+              "quote": "Very great deals My mom would recommend this to everyone out their looking for budget and good quality clothing ,shoes,purses etc Very great deals also Love this fashion shopping app",
+              "chunk_id": "3600f19b-67b4-4666-8db5-b86054646d3f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Overall, Meesho is a great option for budget-friendly shopping",
+              "chunk_id": "a9024018-c3f5-42e6-bff5-5bf3b24027e4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "*I want a full refund immediately and strict action against this seller",
+              "chunk_id": "d58daf2d-a602-43b4-bf24-a6718bc681d9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "[NAME]! Best app for budget-friendly products",
+              "chunk_id": "deaa56d5-58ba-4eca-bb4d-37a4b55d192f_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-5.3",
+          "name": "Visual Mood Boarding for Future Seasons & Trips",
+          "description": "Shortlisting outfits months in advance for vacations (Goa, Europe) and festivals without immediate checkout intent.",
+          "category": "mental_model",
+          "frequency_count": 1069,
+          "sentiment_distribution": {
+            "positive": 207,
+            "negative": 579,
+            "neutral": 283,
+            "mixed": 0
+          },
+          "representative_quotes": [
+            {
+              "quote": "The quality is good, the fabric feels comfortable, and the fitting is perfect. The design looks stylish and the T-shirt looks exactly as shown in the pictures.",
+              "chunk_id": "0c42e68e-1615-4f6d-924b-ee3df64d122f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Overall, Meesho is a great option for budget-friendly shopping",
+              "chunk_id": "a9024018-c3f5-42e6-bff5-5bf3b24027e4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "*I want a full refund immediately and strict action against this seller",
+              "chunk_id": "d58daf2d-a602-43b4-bf24-a6718bc681d9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "[NAME]! Best app for budget-friendly products",
+              "chunk_id": "deaa56d5-58ba-4eca-bb4d-37a4b55d192f_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-06",
+      "name": "Side-by-Side Multi-Product Comparison Friction",
+      "description": "Lack of in-app side-by-side comparison matrix forcing shoppers to use desktop multi-tabs or manual paper notes to evaluate similar items.",
+      "affected_shopping_stages": [
+        "evaluation"
+      ],
+      "total_evidence_count": 1867,
+      "sentiment_distribution": {
+        "positive": 316,
+        "negative": 1196,
+        "neutral": 342,
+        "mixed": 13
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-6.1",
+          "name": "Multi-Tab Switching & Desktop Workarounds",
+          "description": "Shoppers opening 5-10 browser tabs to compare fabric blend, neckline, length, and customer ratings.",
+          "category": "workaround",
+          "frequency_count": 473,
+          "sentiment_distribution": {
+            "positive": 69,
+            "negative": 317,
+            "neutral": 83,
+            "mixed": 4
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now losing its charm I have been using myntra since its launch , I bought each and every garment, accessories, cloths etc from this particular application but from past one year myntra had disappointed me by its quality, service, and every time they send me wrong produc",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now dealing in cheap and low quality products also this is the main reason we are suffering For sure I am going to quit myntra now",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Great quality products 👍 👍 Great quality product",
+              "chunk_id": "f59cf9f9-8007-4a82-a931-be79a8f7f167_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-6.2",
+          "name": "Demand for In-App Spec Comparison Matrix",
+          "description": "Strong request for a single-screen spec comparison tool comparing fabric composition, sheer rating, and price.",
+          "category": "feature_request",
+          "frequency_count": 521,
+          "sentiment_distribution": {
+            "positive": 74,
+            "negative": 353,
+            "neutral": 90,
+            "mixed": 4
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now losing its charm I have been using myntra since its launch , I bought each and every garment, accessories, cloths etc from this particular application but from past one year myntra had disappointed me by its quality, service, and every time they send me wrong produc",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now dealing in cheap and low quality products also this is the main reason we are suffering For sure I am going to quit myntra now",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Great quality products 👍 👍 Great quality product",
+              "chunk_id": "f59cf9f9-8007-4a82-a931-be79a8f7f167_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-6.3",
+          "name": "Choice Overload Causing Complete Cart Abandonment",
+          "description": "Holding 4-5 near-identical black kurtas or floral dresses, resulting in cognitive fatigue and abandoning all of them.",
+          "category": "friction_point",
+          "frequency_count": 873,
+          "sentiment_distribution": {
+            "positive": 173,
+            "negative": 526,
+            "neutral": 169,
+            "mixed": 5
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now losing its charm I have been using myntra since its launch , I bought each and every garment, accessories, cloths etc from this particular application but from past one year myntra had disappointed me by its quality, service, and every time they send me wrong produc",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Myntra is now dealing in cheap and low quality products also this is the main reason we are suffering For sure I am going to quit myntra now",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Great quality products 👍 👍 Great quality product",
+              "chunk_id": "f59cf9f9-8007-4a82-a931-be79a8f7f167_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality of products is very good and prices are also reasonable",
+              "chunk_id": "da705342-78e8-4754-9699-e93369f502e9_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-07",
+      "name": "Event Planning Horizons & Size Stock-Out Anxiety",
+      "description": "Shoppers bookmark outfits 2-3 months ahead of weddings or trips, only to find their size permanently sold out when they are finally ready to purchase.",
+      "affected_shopping_stages": [
+        "consideration",
+        "purchase_decision"
+      ],
+      "total_evidence_count": 2248,
+      "sentiment_distribution": {
+        "positive": 380,
+        "negative": 1553,
+        "neutral": 304,
+        "mixed": 11
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-7.1",
+          "name": "Long Event Planning Horizon Stagnation",
+          "description": "Keeping ethnic sets saved for months while waiting for wedding date confirmations or travel plans.",
+          "category": "mental_model",
+          "frequency_count": 690,
+          "sentiment_distribution": {
+            "positive": 111,
+            "negative": 492,
+            "neutral": 83,
+            "mixed": 4
+          },
+          "representative_quotes": [
+            {
+              "quote": "every time they send me wrong products. Its is very much disappointing to wait for upto 10 days and then got a wrong product .",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Amazing Shopping App It’s been 7 years I have been shopping from Myntra and till date I have faced any issues.",
+              "chunk_id": "4f37a39b-05e4-46d5-ac27-4740d93a2c1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Awesome experience They have [ORDER_ID] their stock in Myntra now",
+              "chunk_id": "f7042e5d-bbcd-4a93-8a7a-f446b37692d0_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The product is good The build quality is very strong and long lasting",
+              "chunk_id": "502180e8-326f-4180-bc84-a2e17f15c0de_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-7.2",
+          "name": "Sudden Stock-Outs on High-Intent Items",
+          "description": "Disappointment when a carefully monitored wishlist item sells out in the user's size right before checkout.",
+          "category": "friction_point",
+          "frequency_count": 899,
+          "sentiment_distribution": {
+            "positive": 149,
+            "negative": 611,
+            "neutral": 135,
+            "mixed": 4
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Whatever products we order from Myntra are very good quality , specially clothes",
+              "chunk_id": "e3ffb6c6-0c32-4a25-b6ae-f9da059ef8ba_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "After making me wait for days, they suddenly called and denied the exchange altogether.",
+              "chunk_id": "70c722ae-3ee5-49e4-9681-a2ace8368124_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-7.3",
+          "name": "Demand for Size-Specific Low Stock Alerts & Temporary Holds",
+          "description": "Request for a 24-hour size reservation or urgent low-stock warning on wishlisted garments.",
+          "category": "feature_request",
+          "frequency_count": 659,
+          "sentiment_distribution": {
+            "positive": 120,
+            "negative": 450,
+            "neutral": 86,
+            "mixed": 3
+          },
+          "representative_quotes": [
+            {
+              "quote": "Bought a dress of M size It was so good experience shopping here",
+              "chunk_id": "56f9e3ed-3cf6-474b-8912-64c3f13c3df7_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Awesome experience They have [ORDER_ID] their stock in Myntra now",
+              "chunk_id": "f7042e5d-bbcd-4a93-8a7a-f446b37692d0_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "My order was not returned I bought a kurti from this site and it was small in size so i opt for exchange but that provision was not available as they don’t hv size so i opt for return and the message was coming that it has been delayed and wen the time for exchange was over they ",
+              "chunk_id": "76401e24-1c06-442a-a0e6-3eb28782a255_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "So guys pls be very careful with this site they can’t help u if ur product is wrong or issue in size",
+              "chunk_id": "76401e24-1c06-442a-a0e6-3eb28782a255_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Technical issue Please pay some attention to my issue Why I am not getting proper status ord the products Most of the products are out of stock when I open in my iPhone but same product I open in my android mobile then it shows in stock Same address no changes It’s impacting my w",
+              "chunk_id": "fb927c38-282c-47d8-86a9-6135bbc58e5d_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-08",
+      "name": "Visual Clutter Paralysis & Wishlist Maintenance (1,000-Item Cap)",
+      "description": "Disorganized, un-categorized wishlist interfaces cluttered with out-of-stock items, hitting the 1,000-item cap and causing search fatigue.",
+      "affected_shopping_stages": [
+        "discovery",
+        "evaluation"
+      ],
+      "total_evidence_count": 3767,
+      "sentiment_distribution": {
+        "positive": 704,
+        "negative": 2123,
+        "neutral": 936,
+        "mixed": 4
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-8.1",
+          "name": "Disorganization & Search Fatigue at 1,000 Item Cap",
+          "description": "Wishlist becoming an unnavigable graveyard of 500-1,000 items where high-intent pieces get lost under old impulse saves.",
+          "category": "friction_point",
+          "frequency_count": 1192,
+          "sentiment_distribution": {
+            "positive": 224,
+            "negative": 658,
+            "neutral": 309,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "or ab to jeans bhi gyi or paisa bhi ye app bilkul bakwas",
+              "chunk_id": "4f319ab9-1240-4cf7-aa85-3f7be51e27a6_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality is good, the fabric feels comfortable, and the fitting is perfect. The design looks stylish and the T-shirt looks exactly as shown in the pictures.",
+              "chunk_id": "0c42e68e-1615-4f6d-924b-ee3df64d122f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I was told that the product could not be returned because it was marked as a “cash”/non-returnable item.",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Overall, Meesho is a great option for budget-friendly shopping",
+              "chunk_id": "a9024018-c3f5-42e6-bff5-5bf3b24027e4_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-8.2",
+          "name": "Out-of-Stock Dead Links Burying Active Items",
+          "description": "Permanently sold-out items cluttering the feed without automatic archiving or back-in-stock notifications.",
+          "category": "friction_point",
+          "frequency_count": 1277,
+          "sentiment_distribution": {
+            "positive": 237,
+            "negative": 723,
+            "neutral": 315,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "or ab to jeans bhi gyi or paisa bhi ye app bilkul bakwas",
+              "chunk_id": "4f319ab9-1240-4cf7-aa85-3f7be51e27a6_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality is good, the fabric feels comfortable, and the fitting is perfect. The design looks stylish and the T-shirt looks exactly as shown in the pictures.",
+              "chunk_id": "0c42e68e-1615-4f6d-924b-ee3df64d122f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-8.3",
+          "name": "Demand for Custom Wishlist Folders (Workwear, Vacation, Gifting)",
+          "description": "Strong user demand to categorize wishlisted items into custom named folders and collections.",
+          "category": "feature_request",
+          "frequency_count": 1298,
+          "sentiment_distribution": {
+            "positive": 243,
+            "negative": 742,
+            "neutral": 312,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "there was no clear mention of any ₹50 return fee.",
+              "chunk_id": "b440b148-8565-4cc0-9834-485826edb5b9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "or ab to jeans bhi gyi or paisa bhi ye app bilkul bakwas",
+              "chunk_id": "4f319ab9-1240-4cf7-aa85-3f7be51e27a6_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "asked customer service about the refund and they told me the same thing that the problem would be resolved by 24 hrs",
+              "chunk_id": "e73174f5-3575-4e94-9762-7fbd3f94d6ec_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Best app for shopping",
+              "chunk_id": "8dc5050e-fdb2-4245-997e-43e39b268ccd_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The quality is good, the fabric feels comfortable, and the fitting is perfect. The design looks stylish and the T-shirt looks exactly as shown in the pictures.",
+              "chunk_id": "0c42e68e-1615-4f6d-924b-ee3df64d122f_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-09",
+      "name": "Desire Decay, Novelty Fading & Stale Wishlist Forgetting",
+      "description": "After 2-4 weeks, the initial emotional enthusiasm completely evaporates; without smart re-engagement nudges, saved items sit forgotten indefinitely.",
+      "affected_shopping_stages": [
+        "consideration"
+      ],
+      "total_evidence_count": 3485,
+      "sentiment_distribution": {
+        "positive": 664,
+        "negative": 1972,
+        "neutral": 847,
+        "mixed": 2
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-9.1",
+          "name": "Novelty Wearing Off After 14-30 Days",
+          "description": "Users revisiting their wishlist a month later and realizing they no longer feel any emotional urge to buy the item.",
+          "category": "mental_model",
+          "frequency_count": 1156,
+          "sentiment_distribution": {
+            "positive": 215,
+            "negative": 664,
+            "neutral": 277,
+            "mixed": 0
+          },
+          "representative_quotes": [
+            {
+              "quote": "every time they send me wrong products. Its is very much disappointing to wait for upto 10 days and then got a wrong product .",
+              "chunk_id": "e825ea5f-77ed-4d5a-a61b-081d58737a1a_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "or ab to jeans bhi gyi or paisa bhi ye app bilkul bakwas",
+              "chunk_id": "4f319ab9-1240-4cf7-aa85-3f7be51e27a6_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I recently buy a shoe from Myntra on 18/08/2026 and the shoe yut not delivered after 8 days 🤮",
+              "chunk_id": "46189991-5c4a-4e88-b725-523436571028_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Very comfortable nice festival look , wearing all ready to go [LOCATION] packing smooth delivery",
+              "chunk_id": "467d8353-2019-49e0-8e03-3c7fdcfeed6f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "After making me wait for days, they suddenly called and denied the exchange altogether.",
+              "chunk_id": "70c722ae-3ee5-49e4-9681-a2ace8368124_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-9.2",
+          "name": "Lack of Timely Proactive Re-Engagement Nudges",
+          "description": "Wishlist items sitting silently without smart reminders about low size inventory, limited-time coupons, or upcoming events.",
+          "category": "friction_point",
+          "frequency_count": 1121,
+          "sentiment_distribution": {
+            "positive": 207,
+            "negative": 640,
+            "neutral": 273,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Overall, Meesho is a great option for budget-friendly shopping",
+              "chunk_id": "a9024018-c3f5-42e6-bff5-5bf3b24027e4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "*I want a full refund immediately and strict action against this seller",
+              "chunk_id": "d58daf2d-a602-43b4-bf24-a6718bc681d9_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "[NAME]! Best app for budget-friendly products",
+              "chunk_id": "deaa56d5-58ba-4eca-bb4d-37a4b55d192f_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "No filter for sorting price low to high.",
+              "chunk_id": "669ffc7f-39ed-4ca1-bbcc-2b309445431a_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-9.3",
+          "name": "Demand for 'Review & Declutter' Smart Clean-Up Assist",
+          "description": "Feature request for an automated periodic prompt asking users to keep, convert, or clean up stagnant wishlist items.",
+          "category": "feature_request",
+          "frequency_count": 1208,
+          "sentiment_distribution": {
+            "positive": 242,
+            "negative": 668,
+            "neutral": 297,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "Review for my college back Using it for 4 years still my college bag is in the best quality",
+              "chunk_id": "85ab17f9-cc45-4fe2-b4d7-762a9d000f91_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Check reviews and descriptions carefully",
+              "chunk_id": "a9c0b680-eda2-43f9-9c6b-88977dddbf84_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "I don’t understand this policy because I had already paid the full amount for the order",
+              "chunk_id": "54926c23-6040-41ac-b175-9edaa2fa9b73_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Overall, Meesho is a great option for budget-friendly shopping",
+              "chunk_id": "a9024018-c3f5-42e6-bff5-5bf3b24027e4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "*I want a full refund immediately and strict action against this seller",
+              "chunk_id": "d58daf2d-a602-43b4-bf24-a6718bc681d9_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "theme_id": "T-10",
+      "name": "Social Reassurance Delays & Off-Platform Peer Validation",
+      "description": "Shoppers pause checkout for days waiting for feedback from family, friends, or partners on WhatsApp screenshots.",
+      "affected_shopping_stages": [
+        "evaluation",
+        "purchase_decision"
+      ],
+      "total_evidence_count": 1178,
+      "sentiment_distribution": {
+        "positive": 127,
+        "negative": 597,
+        "neutral": 450,
+        "mixed": 4
+      },
+      "platform_distribution": {
+        "appstore": 15
+      },
+      "sub_themes": [
+        {
+          "sub_theme_id": "ST-10.1",
+          "name": "Dependency on Family/Peer Approval for High-Ticket Items",
+          "description": "Hesitation to purchase dresses or ethnic sets >₹2,500 without second opinions from friends or family.",
+          "category": "mental_model",
+          "frequency_count": 591,
+          "sentiment_distribution": {
+            "positive": 85,
+            "negative": 317,
+            "neutral": 187,
+            "mixed": 2
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "very trustworthy about their product quality, delivery, return, refund and exchange too",
+              "chunk_id": "2ea73e2e-4d5e-4a18-9678-79f6a7da07a4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Whatever products we order from Myntra are very good quality , specially clothes",
+              "chunk_id": "e3ffb6c6-0c32-4a25-b6ae-f9da059ef8ba_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "It’s a very good experience, a wonderful product and high-quality products",
+              "chunk_id": "cf9d568a-6696-417f-9de2-e5e373572d01_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-10.2",
+          "name": "Friction in Current In-App Sharing Workflows",
+          "description": "Current app sharing generates clunky web links rather than clean, visual preview cards that friends can vote on.",
+          "category": "friction_point",
+          "frequency_count": 310,
+          "sentiment_distribution": {
+            "positive": 20,
+            "negative": 157,
+            "neutral": 132,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "if u return u will be charged ₹50 on each return",
+              "chunk_id": "38404089-2369-40d9-a9dd-ef0c2f6ae64c_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "very trustworthy about their product quality, delivery, return, refund and exchange too",
+              "chunk_id": "2ea73e2e-4d5e-4a18-9678-79f6a7da07a4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Shoes Product quality good & price wise cheaper then other platforms",
+              "chunk_id": "b4757170-f4a0-4674-aab1-91104eaf0617_c0",
+              "platform": "appstore"
+            }
+          ]
+        },
+        {
+          "sub_theme_id": "ST-10.3",
+          "name": "Demand for 1-Click WhatsApp Group Voting Polls",
+          "description": "Desire for a feature that turns wishlisted items into an interactive WhatsApp poll for friends to vote 'Buy' or 'Skip'.",
+          "category": "feature_request",
+          "frequency_count": 277,
+          "sentiment_distribution": {
+            "positive": 22,
+            "negative": 123,
+            "neutral": 131,
+            "mixed": 1
+          },
+          "representative_quotes": [
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "The platform is easy to use, offers attractive discounts, and the products quality is outstanding.",
+              "chunk_id": "938422be-bdd0-49a1-bff4-e68e1462ec13_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "very trustworthy about their product quality, delivery, return, refund and exchange too",
+              "chunk_id": "2ea73e2e-4d5e-4a18-9678-79f6a7da07a4_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Shoes Product quality good & price wise cheaper then other platforms",
+              "chunk_id": "b4757170-f4a0-4674-aab1-91104eaf0617_c0",
+              "platform": "appstore"
+            },
+            {
+              "quote": "Check reviews and descriptions carefully",
+              "chunk_id": "a9c0b680-eda2-43f9-9c6b-88977dddbf84_c0",
+              "platform": "appstore"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

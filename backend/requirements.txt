@@ -1,0 +1,31 @@
+# Scraping & Ingestion
+apify-client>=1.6
+requests>=2.31
+beautifulsoup4>=4.12
+google-api-python-client>=2.100   # YouTube Data API v3
+google-play-scraper>=1.2          # Play Store reviews scraping
+
+# Cleaning
+spacy>=3.7,<3.8
+datasketch>=1.6
+
+# Analysis & LLM
+google-genai>=1.0          # Gemini SDK
+# OR: ollama (pip install ollama)
+
+# RAG
+sentence-transformers>=2.2
+chromadb>=0.4
+faiss-cpu>=1.7             # Alternative to ChromaDB
+
+# API Server
+fastapi>=0.110
+uvicorn>=0.29
+sse-starlette>=1.6         # Server-Sent Events for streaming
+
+# Utilities
+python-dotenv>=1.0
+tqdm>=4.65
+uuid6>=2022.6
+pandas>=2.0                # For research data (CSV/JSON) ingestion
+tiktoken>=0.5              # Token estimation for LLM budget checks

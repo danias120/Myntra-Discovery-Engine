@@ -1,0 +1,12 @@
+{
+  "execution_timestamp": 1788302640.567442,
+  "total_execution_time_sec": 12.78,
+  "total_extracted_evidence_items": 2240,
+  "total_primary_themes": 10,
+  "total_sub_themes": 30,
+  "total_research_questions_mapped": 10,
+  "mean_triangulation_confidence": 0.9,
+  "total_quotes_cited": 30,
+  "themes_output_path": "data/clean/themes.json",
+  "research_findings_path": "data/clean/research_findings.json"
+}

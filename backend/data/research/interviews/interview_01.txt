@@ -1,0 +1,66 @@
+Interview Transcript: User 01 (Participant P01)
+Topic: Wishlist to Purchase Behavior, Seasonality, Verification, and Decision Frictions
+
+Interviewer: Hi, thanks for joining this call. How are you today?
+Shopper: I am good. How are you?
+Interviewer: Yeah, I'm doing great as well. This call is to understand your wishlist to purchase journey.
+
+Interviewer: How do you usually shop for clothes? Online or offline?
+Shopper: It depends on the urgency of the occasion actually. If I have time then I prefer online shopping. If there is something urgent, I buy it from a mall.
+
+Interviewer: Do you usually plan or is it impulsive?
+Shopper: It's kind of both. Sometimes apps offer sudden discounts, then it becomes impulsive shopping. Otherwise mostly it's planned.
+
+Interviewer: What was your recent fashion app purchase?
+Shopper: I purchased a dress from Ajio.
+
+Interviewer: What was the most recent item you added to your wishlist?
+Shopper: An overcoat for winters because I love winter clothes.
+
+Interviewer: Where were you when you added this item?
+Shopper: I was at home and got a notification from Myntra about winter clothes because I browse winter clothes often. I checked it out, liked the overcoat, and added it to my wishlist.
+
+Interviewer: What was the reason for saving it now instead of buying it?
+Shopper: Because I don't need it right now. I would need it during winters. That's why I didn't buy it right now.
+
+Interviewer: Were there any uncertainties in your mind regarding the product?
+Shopper: It has mostly to do with the price. It's quite expensive even though I love it. If the price was a little less, I would have bought it. When winter comes, if there is a price drop I will definitely buy it. If not, and I still really want it, I'll go ahead and purchase it.
+
+Interviewer: Do you use the wishlist as a pre-cart or just because you like items?
+Shopper: It is a bit of both. I save stuff I want to buy now or in the future, but there are items like the overcoat I added just because I liked it.
+
+Interviewer: Recently, has there been a situation where you directly purchased something from your wishlist?
+Shopper: Yes, the denim dress from Ajio. I really liked it, added it, and within a day or two I bought it. The style was nice and the price point was low, so it ticked all my boxes.
+
+Interviewer: Have there been items in your wishlist that you gave up on or forgot about?
+Shopper: Yes, it just fades away or I don't vibe with it anymore. I often remove items because I'm not vibing with them anymore. I like to keep it organized. But there are also items I know I won't buy, but keep because it's a wishlist—you want them at a lower price or to suit you better, even if not in budget.
+
+Interviewer: If you had to describe what your wishlist actually is to you?
+Shopper: It kind of is like a vision board for me. I do want most of the items in my wishlist, and I slowly work my way through buying them.
+
+Interviewer: Have you used wishlist for comparing options, styling, or gifting?
+Shopper: Yes, all of the above! Gifting for sure—saving items for friends. And comparing prices between Myntra and Ajio for similar products.
+
+Interviewer: If the price never dropped, what else would make you buy it?
+Shopper: Real reviews! If the product is exactly the way they show in the images. When the picture looks great but reviews look completely different, that demotivates me a lot. If reviews confirm it matches pictures, I feel it's worth the money and buy it even without a price drop.
+
+Interviewer: When unsure about fit or quality, what do you do?
+Shopper: I check YouTube and real reviews. If a product does not have genuine reviews, I won't buy it because I cannot verify authenticity. If reviews are missing, I search YouTube for try-on haul reviews.
+
+Interviewer: If Ajio is selling a top for ₹400 and Myntra for ₹600, but Myntra has more reviews and customer photos, which one do you pick?
+Shopper: I would go for Myntra because reviews and authenticity matter. Myntra provides the assurance that you get what you see.
+
+Interviewer: Do notifications trigger you to purchase?
+Shopper: Yes, price drop and low stock alerts alert me that an item is at a lower price, and if I like it enough, I buy it.
+
+Interviewer: Would a side-by-side comparison feature help in your wishlist?
+Shopper: Yes! If my wishlist could show side-by-side comparison—which product has more demand, which is getting sold more often, product details, pictures. Seeing demand proves it's a good product and gives a push to buy.
+
+Interviewer: What about auto-deleting wishlisted items after 90 days?
+Shopper: No, I wouldn't want that! That would be disadvantageous because I might add a winter coat in August and buy it in January. I would lose it. I prefer customizing my wishlist over automated deletion.
+
+Interviewer: Would seeing social demand (how many people wishlisted this item) help?
+Shopper: Yes! If an item is in demand and getting sales, that means it's a good product.
+
+Interviewer: Any thoughts on color accuracy and body shape fit?
+Shopper: Sometimes color looks different in reality vs poster. Also, fit is about body shape, not just color or standard size charts. An AI virtual try-on or fit score based on body type would be a very helpful feature.

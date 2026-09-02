@@ -1,0 +1,57 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  darkMode: "class",
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: "#151515",
+        surface: "#151515",
+        "surface-dim": "#151515",
+        "surface-container-lowest": "#111111",
+        "surface-container-low": "#1F1F1F",
+        "surface-container": "#242424",
+        "surface-container-high": "#2B2B2B",
+        "surface-container-highest": "#333333",
+        "surface-bright": "#3A3A3A",
+        "nav-bg": "#24181F",
+        primary: "#F41CB2",
+        "primary-container": "#F41CB2",
+        "primary-fixed": "#F41CB2",
+        secondary: "#FF912E",
+        "secondary-container": "#dc760d",
+        tertiary: "#4ADE80",
+        "tertiary-container": "#00a755",
+        "success-green": "#4ADE80",
+        error: "#F25511",
+        "error-red": "#F25511",
+        "error-container": "#93000a",
+        "on-background": "#FFFFFF",
+        "on-surface": "#FFFFFF",
+        "on-surface-variant": "#B8B8B8",
+        outline: "rgba(255, 255, 255, 0.15)",
+        "outline-variant": "rgba(255, 255, 255, 0.08)",
+      },
+      fontFamily: {
+        geist: ["Geist", "sans-serif"],
+        inter: ["Inter", "sans-serif"],
+      },
+      backgroundImage: {
+        "brand-gradient": "linear-gradient(90deg, #F41CB2 0%, #FF912E 100%)",
+        "brand-gradient-hover": "linear-gradient(90deg, #FF38C2 0%, #FFA247 100%)",
+      },
+      borderRadius: {
+        DEFAULT: "0.25rem",
+        lg: "0.5rem",
+        xl: "0.75rem",
+        "2xl": "1rem",
+        full: "9999px",
+      },
+    },
+  },
+  plugins: [],
+};

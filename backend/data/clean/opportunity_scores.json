@@ -1,0 +1,313 @@
+{
+  "generated_timestamp": 1788302643.297287,
+  "ranking_methodology": "Ranked by customer comment/evidence volume (descending count of supporting customer records)",
+  "weights": {
+    "frequency": 0.4,
+    "platform_spread": 0.3,
+    "purchase_delay_relevance": 0.3
+  },
+  "total_themes_scored": 10,
+  "total_corpus_chunks": 2065,
+  "ranked_opportunities": [
+    {
+      "theme_id": "T-01",
+      "theme_name": "Price Drop Sensitivity & EORS Sale Triggers",
+      "description": "Wishlist usage as a passive price-monitoring tracker where items sit for 30-60 days waiting for flash price drops and EORS discounts.",
+      "comment_count": 928,
+      "comment_share_pct": 44.9,
+      "comment_summary": "928 out of 2,065 customer records (44.9%)",
+      "opportunity_score": 98.5,
+      "frequency_score": 100.0,
+      "platform_spread_score": 100.0,
+      "purchase_delay_score": 95.0,
+      "evidence_count": 928,
+      "platform_count": 8,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey",
+        "youtube"
+      ],
+      "affected_shopping_stages": [
+        "consideration",
+        "purchase_decision"
+      ],
+      "purchase_delay_reasoning": "Waiting for price drops is a primary driver of cart abandonment as users deliberately withhold immediate purchase intent, directly suppressing baseline daily gross merchandise value (GMV) until margin-diluting discount events occur.",
+      "sub_themes_count": 3,
+      "rank": 1
+    },
+    {
+      "theme_id": "T-02",
+      "theme_name": "Cross-Brand Sizing Uncertainty & Fit Anxiety",
+      "description": "Inconsistent size charts across international and domestic brands (e.g. Mango vs Tokyo Talkies) creating severe return hesitation.",
+      "comment_count": 734,
+      "comment_share_pct": 35.5,
+      "comment_summary": "734 out of 2,065 customer records (35.5%)",
+      "opportunity_score": 84.89,
+      "frequency_score": 79.09,
+      "platform_spread_score": 87.5,
+      "purchase_delay_score": 90.0,
+      "evidence_count": 734,
+      "platform_count": 7,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey"
+      ],
+      "affected_shopping_stages": [
+        "evaluation",
+        "purchase_decision"
+      ],
+      "purchase_delay_reasoning": "Sizing anxiety creates severe cognitive friction, directly halting checkout conversion out of fear of cumbersome return loops and refund turnaround times.",
+      "sub_themes_count": 3,
+      "rank": 2
+    },
+    {
+      "theme_id": "T-03",
+      "theme_name": "Social Validation & Unedited Real-Life Photo Proof",
+      "description": "Studio lighting and heavily edited model photos creating deep suspicion about actual fabric colors, drape, and sheerness.",
+      "comment_count": 450,
+      "comment_share_pct": 21.8,
+      "comment_summary": "450 out of 2,065 customer records (21.8%)",
+      "opportunity_score": 74.9,
+      "frequency_score": 48.49,
+      "platform_spread_score": 100.0,
+      "purchase_delay_score": 85.0,
+      "evidence_count": 450,
+      "platform_count": 8,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey",
+        "youtube"
+      ],
+      "affected_shopping_stages": [
+        "evaluation"
+      ],
+      "purchase_delay_reasoning": "Distrust in studio-edited visuals stalls conversion as users demand authentic, user-generated proof of fabric quality and fit before committing funds.",
+      "sub_themes_count": 3,
+      "rank": 3
+    },
+    {
+      "theme_id": "T-04",
+      "theme_name": "Competitor Cross-App Arbitrage & Price Matching (AJIO, Nykaa, Zara)",
+      "description": "Shoppers use Myntra's superior search UI to discover and wishlist items, but purchase them on competitor platforms offering cheaper coupons.",
+      "comment_count": 391,
+      "comment_share_pct": 18.9,
+      "comment_summary": "391 out of 2,065 customer records (18.9%)",
+      "opportunity_score": 70.7,
+      "frequency_score": 42.13,
+      "platform_spread_score": 87.5,
+      "purchase_delay_score": 92.0,
+      "evidence_count": 391,
+      "platform_count": 7,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey"
+      ],
+      "affected_shopping_stages": [
+        "consideration",
+        "evaluation"
+      ],
+      "purchase_delay_reasoning": "Cross-platform price arbitration leads to direct customer leakage and lost revenue to aggressive competitor app promotions immediately after discovery on Myntra.",
+      "sub_themes_count": 3,
+      "rank": 4
+    },
+    {
+      "theme_id": "T-05",
+      "theme_name": "Wishlist as Pre-Cart & Impulse Cooling-Off Buffer",
+      "description": "Shoppers intentionally park fashion items in the wishlist for 7-14 days to let initial impulse enthusiasm cool down and maintain monthly budget discipline.",
+      "comment_count": 360,
+      "comment_share_pct": 17.4,
+      "comment_summary": "360 out of 2,065 customer records (17.4%)",
+      "opportunity_score": 68.02,
+      "frequency_score": 38.79,
+      "platform_spread_score": 100.0,
+      "purchase_delay_score": 75.0,
+      "evidence_count": 360,
+      "platform_count": 8,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey",
+        "youtube"
+      ],
+      "affected_shopping_stages": [
+        "discovery",
+        "consideration"
+      ],
+      "purchase_delay_reasoning": "Intentional cooling-off periods temporarily delay immediate impulse conversions, acting as a natural psychological barrier against spontaneous end-of-month checkouts.",
+      "sub_themes_count": 3,
+      "rank": 5
+    },
+    {
+      "theme_id": "T-06",
+      "theme_name": "Side-by-Side Multi-Product Comparison Friction",
+      "description": "Lack of in-app side-by-side comparison matrix forcing shoppers to use desktop multi-tabs or manual paper notes to evaluate similar items.",
+      "comment_count": 359,
+      "comment_share_pct": 17.4,
+      "comment_summary": "359 out of 2,065 customer records (17.4%)",
+      "opportunity_score": 64.98,
+      "frequency_score": 38.69,
+      "platform_spread_score": 100.0,
+      "purchase_delay_score": 65.0,
+      "evidence_count": 359,
+      "platform_count": 8,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey",
+        "youtube"
+      ],
+      "affected_shopping_stages": [
+        "evaluation"
+      ],
+      "purchase_delay_reasoning": "Comparison friction creates mild user frustration and delays decision-making, though it rarely prevents an eventual purchase if intent is already high.",
+      "sub_themes_count": 3,
+      "rank": 6
+    },
+    {
+      "theme_id": "T-07",
+      "theme_name": "Event Planning Horizons & Size Stock-Out Anxiety",
+      "description": "Shoppers bookmark outfits 2-3 months ahead of weddings or trips, only to find their size permanently sold out when they are finally ready to purchase.",
+      "comment_count": 290,
+      "comment_share_pct": 14.0,
+      "comment_summary": "290 out of 2,065 customer records (14.0%)",
+      "opportunity_score": 62.15,
+      "frequency_score": 31.25,
+      "platform_spread_score": 87.5,
+      "purchase_delay_score": 78.0,
+      "evidence_count": 290,
+      "platform_count": 7,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey"
+      ],
+      "affected_shopping_stages": [
+        "consideration",
+        "purchase_decision"
+      ],
+      "purchase_delay_reasoning": "Delayed purchase horizons directly translate into lost conversions via permanent out-of-stock events, resulting in stock-out drop-offs and missed seasonal sales peaks.",
+      "sub_themes_count": 3,
+      "rank": 7
+    },
+    {
+      "theme_id": "T-08",
+      "theme_name": "Visual Clutter Paralysis & Wishlist Maintenance (1,000-Item Cap)",
+      "description": "Disorganized, un-categorized wishlist interfaces cluttered with out-of-stock items, hitting the 1,000-item cap and causing search fatigue.",
+      "comment_count": 269,
+      "comment_share_pct": 13.0,
+      "comment_summary": "269 out of 2,065 customer records (13.0%)",
+      "opportunity_score": 55.1,
+      "frequency_score": 28.99,
+      "platform_spread_score": 75.0,
+      "purchase_delay_score": 70.0,
+      "evidence_count": 269,
+      "platform_count": 6,
+      "platforms": [
+        "appstore",
+        "interview",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey"
+      ],
+      "affected_shopping_stages": [
+        "discovery",
+        "evaluation"
+      ],
+      "purchase_delay_reasoning": "Wishlist clutter and item caps induce decision fatigue, leading users to abandon browsing sessions entirely rather than clean out or convert saved inventory.",
+      "sub_themes_count": 3,
+      "rank": 8
+    },
+    {
+      "theme_id": "T-09",
+      "theme_name": "Desire Decay, Novelty Fading & Stale Wishlist Forgetting",
+      "description": "After 2-4 weeks, the initial emotional enthusiasm completely evaporates; without smart re-engagement nudges, saved items sit forgotten indefinitely.",
+      "comment_count": 234,
+      "comment_share_pct": 11.3,
+      "comment_summary": "234 out of 2,065 customer records (11.3%)",
+      "opportunity_score": 60.94,
+      "frequency_score": 25.22,
+      "platform_spread_score": 87.5,
+      "purchase_delay_score": 82.0,
+      "evidence_count": 234,
+      "platform_count": 7,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "reddit",
+        "survey"
+      ],
+      "affected_shopping_stages": [
+        "consideration"
+      ],
+      "purchase_delay_reasoning": "Desire decay results in permanent cart abandonment as emotional attachment to saved fashion items naturally wanes over time without proactive algorithmic nudges.",
+      "sub_themes_count": 3,
+      "rank": 9
+    },
+    {
+      "theme_id": "T-10",
+      "theme_name": "Social Reassurance Delays & Off-Platform Peer Validation",
+      "description": "Shoppers pause checkout for days waiting for feedback from family, friends, or partners on WhatsApp screenshots.",
+      "comment_count": 61,
+      "comment_share_pct": 3.0,
+      "comment_summary": "61 out of 2,065 customer records (3.0%)",
+      "opportunity_score": 50.48,
+      "frequency_score": 6.57,
+      "platform_spread_score": 87.5,
+      "purchase_delay_score": 72.0,
+      "evidence_count": 61,
+      "platform_count": 7,
+      "platforms": [
+        "appstore",
+        "interview",
+        "myntra_reviews",
+        "playstore",
+        "quora",
+        "survey",
+        "youtube"
+      ],
+      "affected_shopping_stages": [
+        "evaluation",
+        "purchase_decision"
+      ],
+      "purchase_delay_reasoning": "External validation dependencies introduce multi-day checkout delays, creating windows of opportunity for users to lose interest or purchase elsewhere.",
+      "sub_themes_count": 3,
+      "rank": 10
+    }
+  ]
+}

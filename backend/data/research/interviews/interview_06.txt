@@ -1,0 +1,38 @@
+Interview Transcript: User 06 (Participant P06)
+Topic: Cart vs Wishlist Separation, Price Drop Triggers, Cross-Brand Size Inconsistency, and Missed Restock Pain
+
+Interviewer: Hi, thank you for joining this call. How are you?
+Shopper: I'm good, thank you!
+
+Interviewer: How do you usually shop for clothes? Online or offline?
+Shopper: I prefer online shopping because of better pricing. Myntra is my #1 app for fashion, followed by Nykaa Fashion and Shoppers Stop.
+
+Interviewer: What was the most recent item you added to your wishlist?
+Shopper: A handbag. I put it in my wishlist waiting for the price to go down over time.
+
+Interviewer: When you wishlist an item, do you intend to buy it eventually?
+Shopper: Sometimes I'm just scrolling to see what's new in the market and wishlist things I like but don't need right now. Other times it's for a specific upcoming event.
+
+Interviewer: What did you recently purchase from your wishlist?
+Shopper: A pair of sneakers and a t-shirt. The sneakers were waiting in my wishlist for two weeks. I got a price drop notification, which was the trigger to buy. While purchasing the sneakers, I impulsively added a wishlisted t-shirt to the checkout cart at the same time.
+
+Interviewer: What is the fundamental difference between your Cart and Wishlist?
+Shopper: Wishlist is for items with a "maybe" factor that I want to save for later. But if I need a product right now ("now, now"), it goes directly into my Cart.
+
+Interviewer: What turns that "maybe" into a "yes"?
+Shopper: Price drop alerts and acute necessity for an event.
+
+Interviewer: Do you declutter your wishlist?
+Shopper: No, I leave items as they are. I have products in my wishlist from two years ago. I periodically go back to check if prices have dropped or if out-of-stock items have become available.
+
+Interviewer: How do you handle uncertainty around fit and sizing?
+Shopper: Every brand has different sizing (e.g. size 30 in one brand vs 32 in another). I order it and rely on the exchange/return policy if the fit is off.
+
+Interviewer: Do you do external research before purchasing?
+Shopper: Yes, brand and quality checks on YouTube and Instagram influencer try-on reviews are essential before I buy.
+
+Interviewer: How do you compare 2-3 similar white tops in your wishlist?
+Shopper: I compare customer reviews, ratings, brand reputation, and price. A side-by-side comparison feature on one screen would be very convenient and prevent missing details from jumping back and forth.
+
+Interviewer: Any specific notification failure or wishlist frustration?
+Shopper: Yes! I wishlisted a Victoria's Secret mist that is frequently out of stock. It got restocked and I received a single notification, but I missed it and it immediately went out of stock again. For high-intent wishlisted items, apps should send persistent or multiple restock alerts rather than just a single easily-missed notification.

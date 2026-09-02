@@ -1,0 +1,380 @@
+[
+  {
+    "query_id": "BQ-01",
+    "query_text": "Why do users add items to their wishlist?",
+    "language": "en",
+    "rqs": [
+      "RQ1"
+    ],
+    "theme_id": "T-01",
+    "expected_chunks": [
+      "9a60b633-fe82-4cf9-a2e3-0ea8ec251d6e_c0",
+      "076ab2b1-150f-4710-a17b-0c996b783683_c0",
+      "bbc92574-124d-4c7c-b3f1-2dceeccc8a44_c0",
+      "9e081058-84bb-4a5e-8222-e6a502ddc4ed_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-02",
+    "query_text": "What prevents users from buying wishlisted items?",
+    "language": "en",
+    "rqs": [
+      "RQ2"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "cf9fb9da-0307-408e-a3ac-d8d210e5e79e_c0",
+      "aa7b2db4-e477-4711-972b-9efb0df3260f_c0",
+      "630a7759-fb42-497b-af96-027ddfd8cd52_c0",
+      "4339da6f-450b-4d1f-a0e4-2b28f0e03ed4_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-03",
+    "query_text": "How do size and fit concerns affect fashion purchases?",
+    "language": "en",
+    "rqs": [
+      "RQ3",
+      "RQ7"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "9ad40e25-8165-499a-bd00-8039b8222973_c0",
+      "8ffcfe88-ca8b-481e-a39e-3d3859df5643_c0",
+      "93773428-93fa-4763-965a-1f904e3a39a5_c0",
+      "26c69c7c-35ad-42b1-a287-6c37d0ecdb24_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-04",
+    "query_text": "Do users use the wishlist as a bookmarking tool?",
+    "language": "en",
+    "rqs": [
+      "RQ8"
+    ],
+    "theme_id": "T-05",
+    "expected_chunks": [
+      "9e081058-84bb-4a5e-8222-e6a502ddc4ed_c0",
+      "0f43f729-bb62-4690-867d-26a89a681fc3_c0",
+      "df38f703-facd-4eee-8baf-d01e0c847845_c0",
+      "8a6d0137-087c-4c05-813c-b0e35f595428_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-05",
+    "query_text": "What do users search for outside Myntra before buying?",
+    "language": "en",
+    "rqs": [
+      "RQ6"
+    ],
+    "theme_id": "T-04",
+    "expected_chunks": [
+      "6485434a-ea66-42d3-a823-aa6924ad318e_c0",
+      "T-04",
+      "4408d368-3355-458d-859a-9f2127124513_c0",
+      "eaf1148f-ac1a-4b7a-926a-d1cdeb1c606c_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-06",
+    "query_text": "myntra pe wishlist mein kyun rakhte ho?",
+    "language": "hi",
+    "rqs": [
+      "RQ1"
+    ],
+    "theme_id": "T-01",
+    "expected_chunks": [
+      "e2934f6b-1105-45a1-a19d-e8a2bf8ead75_c0",
+      "8a6d0137-087c-4c05-813c-b0e35f595428_c0",
+      "b2f34b19-22d9-4ad2-9448-0f924886d93d_c0",
+      "4113c2d7-90c8-47ed-9a1f-9937dca3ab1a_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-07",
+    "query_text": "why myntra ki wishlist se kuch nahi khareedta",
+    "language": "hinglish",
+    "rqs": [
+      "RQ2"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "e2934f6b-1105-45a1-a19d-e8a2bf8ead75_c0",
+      "11295bf5-f734-42ef-bc97-a28dedba6aaf_c0",
+      "aaa50c8b-29ae-4485-906a-2d019d144bdf_c0",
+      "e46d47dd-f9cb-4731-8866-8e455d0346f6_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-08",
+    "query_text": "What causes users to postpone a purchase?",
+    "language": "en",
+    "rqs": [
+      "RQ4"
+    ],
+    "theme_id": "T-01",
+    "expected_chunks": [
+      "3c1297a4-ac68-4260-851d-e05479d647b7_c0",
+      "410b76f5-6487-4894-bd2d-56b828bfacb6_c0",
+      "2fdacd03-b9a1-4aea-b7dc-d32b484dc890_c0",
+      "2b712167-9d1a-44ee-8485-128270b43def_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-09",
+    "query_text": "How do users compare multiple shortlisted products?",
+    "language": "en",
+    "rqs": [
+      "RQ5"
+    ],
+    "theme_id": "T-06",
+    "expected_chunks": [
+      "3ecfce08-cf00-477b-a6dd-6f1e96784ffd_c0",
+      "b51a682d-ec57-478c-96fe-1b4e1f9171a2_c0",
+      "714c1fce-c35b-40d6-aed8-dbf326913b97_c0",
+      "27d02d44-719a-4ba7-a903-4f8c9187798c_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-10",
+    "query_text": "What role do customer reviews and unedited daylight photos play?",
+    "language": "en",
+    "rqs": [
+      "RQ7"
+    ],
+    "theme_id": "T-03",
+    "expected_chunks": [
+      "443f5d61-1b72-4af7-a55b-22107c2a23f8_c0",
+      "22db8d87-09c2-41a0-92b1-cf56e4f2e252_c0",
+      "2d648624-7908-4566-9e53-c46969016eb7_c0",
+      "91e84206-9af0-431e-aa7f-c18437f38857_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-11",
+    "query_text": "How do wishlist behaviors differ across user segments?",
+    "language": "en",
+    "rqs": [
+      "RQ9"
+    ],
+    "theme_id": "T-10",
+    "expected_chunks": [
+      "e2e270c4-6597-4f9c-b007-ed67ec59f61b_c0",
+      "ea975f36-62a7-4a62-a237-43a91656add0_c0",
+      "ac463d12-c8e5-42d2-a4fe-64199cf95013_c0",
+      "80572233-d5ff-491f-b4f3-d3dbf8a4fa4a_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-12",
+    "query_text": "What unmet needs emerge consistently across user conversations?",
+    "language": "en",
+    "rqs": [
+      "RQ10"
+    ],
+    "theme_id": "T-08",
+    "expected_chunks": [
+      "eebb7614-6ba2-4fce-9db8-2f96f1c50abc_c0",
+      "40efd2f2-9c95-432f-8f18-955209f21630_c0",
+      "e2e270c4-6597-4f9c-b007-ed67ec59f61b_c0",
+      "6c60205c-e03b-496c-8e2a-f28667ef1297_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-13",
+    "query_text": "price drop ka wait karte hain sale ke liye",
+    "language": "hinglish",
+    "rqs": [
+      "RQ4"
+    ],
+    "theme_id": "T-01",
+    "expected_chunks": [
+      "fce8852f-4016-4fc2-92c4-36e2b52cbed4_c0",
+      "b3458081-bfb6-4029-a5f6-0e35d001f37d_c0",
+      "20e26f6f-4546-4ab2-877a-86053bbc2dd3_c0",
+      "f15e113c-d1d5-423b-bf6b-1e23a99af4e4_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-14",
+    "query_text": "kapdo ka size kaisa hoga return karne ka dar",
+    "language": "hi",
+    "rqs": [
+      "RQ3",
+      "RQ7"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "4f319ab9-1240-4cf7-aa85-3f7be51e27a6_c0",
+      "d5862bcc-1053-457f-8e4e-0648e16cce90_c0",
+      "23a4383b-e788-482b-9ce1-42e867dd59f0_c0",
+      "ad1f35bc-a616-49f0-b11c-86062fe54f39_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-15",
+    "query_text": "friends se whatsapp pe screenshot share karke poochte hain",
+    "language": "hinglish",
+    "rqs": [
+      "RQ7"
+    ],
+    "theme_id": "T-03",
+    "expected_chunks": [
+      "786f6faa-4c3b-425b-864c-c83474bf78a4_c0",
+      "ddcc4780-5f07-4108-9b48-17d3017dffbb_c0",
+      "4c5cbc39-b662-4373-978e-36723ff18706_c0",
+      "6f310240-92dc-4eb1-b3de-3738813753cb_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-16",
+    "query_text": "ajio ya nykaa pe sasta milta hai kya coupon code",
+    "language": "hinglish",
+    "rqs": [
+      "RQ5",
+      "RQ6"
+    ],
+    "theme_id": "T-04",
+    "expected_chunks": [
+      "d6a158c2-60de-4746-ae95-16450566dc5c_c0",
+      "dce4e215-7e1e-4fbd-aed8-acfd64bfb642_c0",
+      "310a5921-9940-4da0-bd2e-0a33fef9154f_c0",
+      "T-04"
+    ]
+  },
+  {
+    "query_id": "BQ-17",
+    "query_text": "wishlist bohot clutter ho gayi hai 1000 items limit reached",
+    "language": "hinglish",
+    "rqs": [
+      "RQ10"
+    ],
+    "theme_id": "T-08",
+    "expected_chunks": [
+      "6ef6ea2c-bfb9-4956-acb7-cffcb108a5f6_c0",
+      "T-08",
+      "0ea51477-f5a3-4b1a-a03c-8c0e7d8f617f_c0",
+      "f673633a-7b17-4a85-a2c3-a89ec534b1c0_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-18",
+    "query_text": "wedding aur vacation ke liye dresses save kiye hain",
+    "language": "hinglish",
+    "rqs": [
+      "RQ3"
+    ],
+    "theme_id": "T-07",
+    "expected_chunks": [
+      "2e78eb17-5df9-4848-b9ed-4b98c7ce220b_c0",
+      "bfaafdf2-3557-46fd-a748-78c6bfd1e0a2_c0",
+      "9ed56a2a-f7fe-4f1a-9790-9300c3f04fb9_c0",
+      "3285a51e-4ef1-45ce-9d42-182499553079_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-19",
+    "query_text": "real daylight photos chahiye studio lighting pe trust nahi hai",
+    "language": "hinglish",
+    "rqs": [
+      "RQ7"
+    ],
+    "theme_id": "T-03",
+    "expected_chunks": [
+      "ef76aa28-52bc-4065-9177-10a4168d1da8_c0",
+      "e30cec27-fded-4d42-9930-bb8de29c0910_c0",
+      "636f3bb0-5190-436d-a651-af853155fead_c0",
+      "52a916c0-ead2-4efe-af7d-bee43869e6a4_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-20",
+    "query_text": "side by side comparison tool hona chahiye fabric check karne ke liye",
+    "language": "hinglish",
+    "rqs": [
+      "RQ10"
+    ],
+    "theme_id": "T-06",
+    "expected_chunks": [
+      "5d82a581-c064-4acf-b791-50ca5650db89_c0",
+      "0eb07816-cc15-4799-aa7f-789351bde8a8_c0",
+      "3b58fec2-ee7c-4156-90ef-14555c26215f_c0",
+      "6f5ee00e-4c91-4f83-bcdc-d7407f3e08bc_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-21",
+    "query_text": "Does the 1000 item limit cause decision paralysis?",
+    "language": "en",
+    "rqs": [
+      "RQ10"
+    ],
+    "theme_id": "T-08",
+    "expected_chunks": [
+      "69021019-0adb-4205-bc6b-31e877a0bc72_c0",
+      "T-08",
+      "6ef6ea2c-bfb9-4956-acb7-cffcb108a5f6_c0",
+      "9e081058-84bb-4a5e-8222-e6a502ddc4ed_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-22",
+    "query_text": "Why do shoppers abandon their wishlist during checkout?",
+    "language": "en",
+    "rqs": [
+      "RQ2"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "4f35181a-0bc0-4a7e-a791-17f7a63bc21b_c0",
+      "c908bc5e-de43-4aa0-b972-930b2ea672bd_c0",
+      "8eaa6349-83c0-486a-8183-549df359eb3e_c0",
+      "efdeb98d-d0df-41a4-9d4b-6186226f7b14_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-23",
+    "query_text": "kya bargain hunters sirf EORS sale ka wait karte hain?",
+    "language": "hinglish",
+    "rqs": [
+      "RQ9"
+    ],
+    "theme_id": "T-01",
+    "expected_chunks": [
+      "764b4401-f098-460d-a8e3-305ecf30356c_c0",
+      "T-01",
+      "eeb47e54-31f3-443c-bdaf-a6a094a0b2a6_c0",
+      "96956209-4e2f-47ef-af63-47490b979758_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-24",
+    "query_text": "Is sizing inconsistency between brands causing checkout hesitation?",
+    "language": "en",
+    "rqs": [
+      "RQ3"
+    ],
+    "theme_id": "T-02",
+    "expected_chunks": [
+      "T-02",
+      "26c69c7c-35ad-42b1-a287-6c37d0ecdb24_c0",
+      "9ad40e25-8165-499a-bd00-8039b8222973_c0",
+      "5ed5924e-0bf7-46b1-9d42-84b9804b9cf8_c0"
+    ]
+  },
+  {
+    "query_id": "BQ-25",
+    "query_text": "Cross-app coupon comparison between Myntra and competitors",
+    "language": "en",
+    "rqs": [
+      "RQ6"
+    ],
+    "theme_id": "T-04",
+    "expected_chunks": [
+      "T-04",
+      "3cab217d-e5c3-4997-97af-9d5ceb2c5cb5_c0",
+      "152d087e-2822-4a59-922c-ccf48a955d38_c0",
+      "dce4e215-7e1e-4fbd-aed8-acfd64bfb642_c0"
+    ]
+  }
+]
