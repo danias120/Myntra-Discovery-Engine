@@ -7,7 +7,9 @@ from __future__ import annotations
 import json
 from typing import Any, Dict, List, Optional
 
+from fastapi import APIRouter
 from fastapi.responses import StreamingResponse
+from pydantic import BaseModel, Field
 
 from src.rag.generator import answer_generator
 from src.rag.retriever import retriever
