@@ -182,7 +182,7 @@ export default function FAQsPage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-bold text-white tracking-tight">
           FAQs
         </h1>
-        <p className="text-sm sm:text-base text-[#B8B8B8] max-w-xl mx-auto">
+        <p className="text-sm sm:text-base text-[#B8B8B8] max-w-3xl mx-auto">
           Core qualitative research questions synthesized from the 2,065-record customer evidence corpus.
         </p>
       </div>
@@ -246,16 +246,34 @@ export default function FAQsPage() {
                     <button
                       onClick={() => {
                         if (rq.supporting_quotes && rq.supporting_quotes.length > 0) {
+                          const quoteObj = rq.supporting_quotes[0];
+                          const pLower = (quoteObj.platform || "").toLowerCase();
+                          const isInternal = pLower.includes("interview") || pLower.includes("survey");
+                          let resolvedUrl: string | null = null;
+                          let sourceLabel = "Verified Source";
+
+                          if (pLower.includes("reddit")) {
+                            resolvedUrl = "https://www.reddit.com/r/IndianFashionAddicts/search/?q=Myntra+wishlist&restrict_sr=1";
+                            sourceLabel = "Reddit Discussion";
+                          } else if (pLower.includes("quora")) {
+                            resolvedUrl = "https://www.quora.com/search?q=Myntra+wishlist+shopping";
+                            sourceLabel = "Quora Topic Search";
+                          } else if (pLower.includes("play")) {
+                            resolvedUrl = "https://play.google.com/store/apps/details?id=com.myntra.android";
+                            sourceLabel = "Google Play Store Listing";
+                          } else if (pLower.includes("app")) {
+                            resolvedUrl = "https://apps.apple.com/in/app/myntra-fashion-shopping-app/id907394059";
+                            sourceLabel = "Apple App Store Listing";
+                          }
+
                           setModalEvidence({
-                            quote: rq.supporting_quotes[0].quote,
-                            chunk_id: rq.supporting_quotes[0].chunk_id,
-                            platform: rq.supporting_quotes[0].platform,
+                            quote: quoteObj.quote,
+                            chunk_id: quoteObj.chunk_id,
+                            platform: quoteObj.platform,
                             theme: rq.primary_themes_involved ? rq.primary_themes_involved[0] : "Wishlist Research",
-                            url: rq.supporting_quotes[0].platform?.toLowerCase().includes("reddit") 
-                              ? "https://reddit.com/r/IndianFashionAddicts" 
-                              : rq.supporting_quotes[0].platform?.toLowerCase().includes("quora") 
-                              ? "https://quora.com" 
-                              : "https://apps.apple.com/in/app/id907394059",
+                            url: resolvedUrl,
+                            is_internal: isInternal,
+                            source_label: sourceLabel,
                           });
                           setIsModalOpen(true);
                         }

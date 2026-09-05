@@ -19,6 +19,7 @@ from src.rag.rag_config import default_rag_config, RAGConfig
 from src.rag.retriever import retriever as global_retriever, Retriever
 from src.utils.llm_client import default_llm_client, LLMClient
 from src.utils.logger import get_logger
+from src.utils.url_resolver import resolve_evidence_url
 
 logger = get_logger("answer_generator")
 
@@ -181,11 +182,16 @@ class AnswerGenerator:
         # Build clean citations list for UI modal inspection
         citations_list = []
         for idx, c in enumerate(context_snippets[:5]):
+            resolved_url, display_label, is_internal = resolve_evidence_url(
+                c.get("source_platform", ""), c.get("source_url")
+            )
             citations_list.append({
                 "citation_id": idx + 1,
                 "chunk_id": c.get("chunk_id", f"chunk_{idx+1}"),
                 "source_platform": c.get("source_platform", "Corpus").capitalize(),
-                "source_url": c.get("source_url") or "https://myntra.com",
+                "source_url": resolved_url,
+                "is_internal": is_internal,
+                "source_label": display_label,
                 "verbatim_quote": c.get("text", "")[:280],
                 "relevance_score": c.get("rerank_score", c.get("score", 0.9)),
             })
@@ -297,11 +303,16 @@ class AnswerGenerator:
         # 4. Build Citations & Metadata
         citations_list = []
         for idx, c in enumerate(context_snippets[:5]):
+            resolved_url, display_label, is_internal = resolve_evidence_url(
+                c.get("source_platform", ""), c.get("source_url")
+            )
             citations_list.append({
                 "citation_id": idx + 1,
                 "chunk_id": c.get("chunk_id", f"chunk_{idx+1}"),
                 "source_platform": c.get("source_platform", "Corpus").capitalize(),
-                "source_url": c.get("source_url") or "https://myntra.com",
+                "source_url": resolved_url,
+                "is_internal": is_internal,
+                "source_label": display_label,
                 "verbatim_quote": c.get("text", "")[:280],
                 "relevance_score": c.get("rerank_score", c.get("score", 0.9)),
             })

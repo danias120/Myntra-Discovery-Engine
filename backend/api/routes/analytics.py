@@ -13,6 +13,8 @@ from typing import Any, Dict, List, Optional
 
 from fastapi import APIRouter, HTTPException, Query
 
+from src.utils.url_resolver import resolve_evidence_url
+
 router = APIRouter(tags=["Analytics & Reports"])
 
 BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
@@ -324,11 +326,16 @@ async def get_reviews(
     records_out = []
     for r in page_records:
         txt = r.get("text", "")
+        resolved_url, display_label, is_internal = resolve_evidence_url(
+            r.get("source_platform", ""), r.get("source_url")
+        )
         records_out.append({
             "id": r.get("chunk_id") or r.get("record_id", "chunk_0"),
             "source_platform": r.get("source_platform", "unknown").lower(),
             "source_display": _get_platform_display(r.get("source_platform", "")),
-            "source_url": r.get("source_url") or "https://myntra.com",
+            "source_url": resolved_url,
+            "is_internal": is_internal,
+            "source_label": display_label,
             "date": _format_date(r.get("timestamp", "")),
             "text": txt,
             "theme": _infer_theme(txt),

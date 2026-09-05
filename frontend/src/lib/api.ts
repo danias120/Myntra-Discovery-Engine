@@ -66,6 +66,8 @@ export interface QueryResponse {
     chunk_id: string;
     source_platform: string;
     source_url?: string;
+    is_internal?: boolean;
+    source_label?: string;
     relevance_score?: number;
     verbatim_quote?: string;
     text_preview?: string;
@@ -130,6 +132,8 @@ export interface ReviewItem {
   source_platform: string;
   source_display: string;
   source_url: string;
+  is_internal?: boolean;
+  source_label?: string;
   date: string;
   text: string;
   theme: string;

@@ -12,7 +12,8 @@ import {
   TrendingUp,
   Loader2,
   Filter,
-  ArrowUpDown
+  ArrowUpDown,
+  FileText
 } from "lucide-react";
 import { fetchReviews, fetchReviewsIntelligence, ReviewItem, ReviewsIntelligence } from "@/lib/api";
 import EvidenceModal from "@/components/EvidenceModal";
@@ -423,6 +424,8 @@ export default function ReviewsPage() {
                           platform: rev.source_display,
                           theme: rev.theme,
                           url: rev.source_url,
+                          is_internal: rev.is_internal,
+                          source_label: rev.source_label,
                         });
                         setIsModalOpen(true);
                       }}
@@ -451,16 +454,39 @@ export default function ReviewsPage() {
                         {getSentimentBadge(rev.sentiment)}
                       </td>
                       <td className="py-3.5 px-4 text-center">
-                        <a
-                          href={rev.source_url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center justify-center p-1 rounded hover:bg-white/10 text-white hover:text-gray-300 transition-colors"
-                          title="Open Original Source Link"
-                        >
-                          <ExternalLink className="h-4 w-4 text-white" />
-                        </a>
+                        {rev.is_internal || !rev.source_url ? (
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setModalEvidence({
+                                quote: rev.text,
+                                chunk_id: rev.id,
+                                platform: rev.source_display,
+                                theme: rev.theme,
+                                url: null,
+                                is_internal: true,
+                                source_label: rev.source_label || "Internal Research",
+                              });
+                              setIsModalOpen(true);
+                            }}
+                            className="inline-flex items-center justify-center p-1.5 rounded hover:bg-white/10 text-[#B8B8B8] hover:text-white transition-colors"
+                            title="View Internal Primary Research Transcript"
+                          >
+                            <FileText className="h-4 w-4" />
+                          </button>
+                        ) : (
+                          <a
+                            href={rev.source_url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            onClick={(e) => e.stopPropagation()}
+                            className="inline-flex items-center justify-center p-1.5 rounded hover:bg-white/10 text-white hover:text-gray-300 transition-colors"
+                            title={rev.source_label ? `Open ${rev.source_label}` : "Open Verified Source Link"}
+                          >
+                            <ExternalLink className="h-4 w-4 text-white" />
+                          </a>
+                        )}
                       </td>
                     </tr>
                   ))

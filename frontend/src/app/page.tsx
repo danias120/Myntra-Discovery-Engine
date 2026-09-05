@@ -522,7 +522,12 @@ export default function OverviewPage() {
 
       {/* Sources Identification Modal */}
       {showSourcesModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn">
+        <div 
+          onClick={(e) => {
+            if (e.target === e.currentTarget) setShowSourcesModal(false);
+          }}
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-fadeIn"
+        >
           <div className="bento-card max-w-lg w-full p-6 border border-white/20 bg-[#1E1E1E] shadow-2xl relative">
             <div className="flex items-center justify-between pb-4 border-b border-white/10 mb-4">
               <div>
@@ -531,6 +536,7 @@ export default function OverviewPage() {
               </div>
               <button 
                 onClick={() => setShowSourcesModal(false)}
+                aria-label="Close"
                 className="p-1 rounded-lg hover:bg-white/10 text-gray-400 hover:text-white transition-colors"
               >
                 <X className="h-5 w-5" />
@@ -552,15 +558,6 @@ export default function OverviewPage() {
                   </div>
                 </div>
               ))}
-            </div>
-
-            <div className="mt-5 pt-4 border-t border-white/10 flex justify-end">
-              <button
-                onClick={() => setShowSourcesModal(false)}
-                className="px-4 py-2 rounded-lg bg-white text-black font-semibold text-xs hover:bg-gray-200 transition-colors"
-              >
-                Close
-              </button>
             </div>
           </div>
         </div>
