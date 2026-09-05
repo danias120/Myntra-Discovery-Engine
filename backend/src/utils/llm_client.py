@@ -17,6 +17,9 @@ import re
 import time
 from typing import Any, AsyncGenerator, Dict, List, Optional
 
+import warnings
+warnings.filterwarnings("ignore", message=".*thought_signature.*")
+
 try:
     import tiktoken
     TIKTOKEN_AVAILABLE = True
@@ -38,8 +41,9 @@ logger = get_logger("llm_client")
 
 FALLBACK_MODELS: List[str] = [
     "gemini-3.6-flash",
-    "gemini-2.5-flash",
-    "gemini-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+    "gemini-flash-latest",
 ]
 
 
@@ -80,6 +84,7 @@ class LLMClient:
         system_prompt: Optional[str] = None,
         json_mode: bool = False,
         temperature: float = 0.1,
+        max_output_tokens: int = 600,
         use_cache: bool = True,
         max_retries: int = 5,
     ) -> str:
@@ -97,7 +102,12 @@ class LLMClient:
 
         if self.provider == "gemini":
             result_text = self._generate_gemini(
-                prompt, system_prompt, json_mode=json_mode, temperature=temperature, max_retries=max_retries
+                prompt,
+                system_prompt,
+                json_mode=json_mode,
+                temperature=temperature,
+                max_output_tokens=max_output_tokens,
+                max_retries=max_retries,
             )
         elif self.provider == "ollama":
             result_text = self._generate_ollama(prompt, system_prompt)
@@ -123,6 +133,7 @@ class LLMClient:
         system_prompt: Optional[str],
         json_mode: bool = False,
         temperature: float = 0.1,
+        max_output_tokens: int = 600,
         max_retries: int = 5,
     ) -> str:
         if not self._gemini_client and GEMINI_API_KEY:
@@ -140,16 +151,30 @@ class LLMClient:
             for attempt in range(1, max_retries + 1):
                 try:
                     self.limiter.acquire()
-                    config_args: Dict[str, Any] = {"temperature": temperature}
+                    from google.genai import types
+
+                    config_kwargs: Dict[str, Any] = {
+                        "temperature": temperature,
+                        "max_output_tokens": max_output_tokens,
+                    }
                     if system_prompt:
-                        config_args["system_instruction"] = system_prompt
+                        config_kwargs["system_instruction"] = system_prompt
                     if json_mode:
-                        config_args["response_mime_type"] = "application/json"
+                        config_kwargs["response_mime_type"] = "application/json"
+
+                    # Disable thinking budget on models that support it to eliminate reasoning latency
+                    if "lite" not in model_name.lower():
+                        try:
+                            config_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+                        except Exception:
+                            pass
+
+                    gen_config = types.GenerateContentConfig(**config_kwargs)
 
                     response = self._gemini_client.models.generate_content(
                         model=model_name,
                         contents=prompt,
-                        config=config_args,
+                        config=gen_config,
                     )
 
                     if response and hasattr(response, "text") and response.text:
@@ -158,11 +183,15 @@ class LLMClient:
 
                 except Exception as e:
                     err_str = str(e)
-                    # Detect 429 retryDelay
                     delay_match = re.search(r"retry\s+in\s+([0-9\.]+)\s*s", err_str, re.IGNORECASE) or re.search(r"retryDelay':\s*'([0-9]+)s'", err_str)
                     sleep_time = float(delay_match.group(1)) + 1.0 if delay_match else backoff
 
                     if "429" in err_str or "503" in err_str or "RESOURCE_EXHAUSTED" in err_str:
+                        if sleep_time > 10.0:
+                            logger.warning(
+                                f"Daily quota exhausted on {model_name} (retryDelay: {sleep_time:.1f}s). Fast-switching to next model..."
+                            )
+                            break
                         logger.warning(
                             f"Rate limit / 503 on {model_name} (attempt {attempt}/{max_retries}): waiting {sleep_time:.1f}s..."
                         )
@@ -170,7 +199,7 @@ class LLMClient:
                         backoff = min(60.0, backoff * 2.0)
                     else:
                         logger.error(f"Error on {model_name}: {e}")
-                        break  # Try next model
+                        break
 
         logger.error("Exhausted all Gemini models.")
         return ""
@@ -200,35 +229,62 @@ class LLMClient:
         self,
         prompt: str,
         system_prompt: Optional[str] = None,
+        max_output_tokens: int = 600,
+        temperature: float = 0.2,
     ) -> AsyncGenerator[str, None]:
         if not self._gemini_client and GEMINI_API_KEY:
             from google import genai
             self._gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
         if not self._gemini_client:
-            resp = self.generate(prompt, system_prompt)
+            resp = self.generate(prompt, system_prompt, max_output_tokens=max_output_tokens)
             yield resp
             return
 
-        try:
-            self.limiter.acquire()
-            config_args = {}
-            if system_prompt:
-                config_args["system_instruction"] = system_prompt
+        models_to_try = [self.gemini_model_name] + [m for m in FALLBACK_MODELS if m != self.gemini_model_name]
 
-            response_stream = self._gemini_client.models.generate_content_stream(
-                model=self.gemini_model_name,
-                contents=prompt,
-                config=config_args if config_args else None,
-            )
+        for model_name in models_to_try:
+            try:
+                self.limiter.acquire()
+                from google.genai import types
 
-            for chunk in response_stream:
-                if chunk and hasattr(chunk, "text") and chunk.text:
-                    yield chunk.text
+                config_kwargs: Dict[str, Any] = {
+                    "temperature": temperature,
+                    "max_output_tokens": max_output_tokens,
+                }
+                if system_prompt:
+                    config_kwargs["system_instruction"] = system_prompt
 
-        except Exception as e:
-            logger.error(f"Error in Gemini streaming: {e}")
-            yield f"\n[Generation error: {e}]"
+                # Disable thinking budget on models that support it to eliminate reasoning latency
+                if "lite" not in model_name.lower():
+                    try:
+                        config_kwargs["thinking_config"] = types.ThinkingConfig(thinking_budget=0)
+                    except Exception:
+                        pass
+
+                gen_config = types.GenerateContentConfig(**config_kwargs)
+
+                response_stream = self._gemini_client.models.generate_content_stream(
+                    model=model_name,
+                    contents=prompt,
+                    config=gen_config,
+                )
+
+                streamed_any = False
+                for chunk in response_stream:
+                    if chunk and hasattr(chunk, "text") and chunk.text:
+                        streamed_any = True
+                        yield chunk.text
+
+                if streamed_any:
+                    return
+
+            except Exception as e:
+                err_str = str(e)
+                logger.warning(f"Streaming error on {model_name}: {e}. Trying next model...")
+                continue
+
+        yield "\n[Generation temporarily unavailable. Please try again.]"
 
 
 default_llm_client = LLMClient()

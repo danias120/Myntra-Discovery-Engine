@@ -45,14 +45,14 @@ class RAGConfig:
     THEMES_COLLECTION_NAME: str = "myntra_theme_summaries"
 
     # 3. Initial Retrieval Settings
-    INITIAL_TOP_K: int = 20          # Candidates retrieved from vector store
+    INITIAL_TOP_K: int = 10          # Candidates retrieved from vector store
     RETRIEVAL_SCOPE: str = "both"    # "corpus", "themes", or "both"
     SIMILARITY_METRIC: str = "cosine" # Cosine distance / inner product
 
     # 4. Cross-Encoder Reranker Settings
     RERANKER_MODEL: str = os.getenv("RERANKER_MODEL", "cross-encoder/ms-marco-MiniLM-L-6-v2")
     RERANKER_ENABLED: bool = True
-    FINAL_TOP_K: int = 8             # Snippets sent to LLM prompt
+    FINAL_TOP_K: int = 6             # Snippets sent to LLM prompt
 
     # 5. Generation Context Window & Guardrails
     MAX_CONTEXT_TOKENS: int = 3000   # Token budget for retrieved context

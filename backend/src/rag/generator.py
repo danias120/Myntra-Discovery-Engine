@@ -22,89 +22,49 @@ from src.utils.logger import get_logger
 
 logger = get_logger("answer_generator")
 
-ANSWER_SYSTEM_PROMPT = """You are the Lead Qualitative AI Analyst for Myntra's Wishlist-to-Cart Discovery Engine.
-You synthesize customer intelligence from a 2,065-record research corpus across Reddit (r/IndianFashionAddicts, r/TwoXIndia, r/delhi), Quora, App Store, Google Play Store, Surveys, and 1-on-1 Interviews.
+BASE_SYSTEM_PROMPT = """You are the Lead Qualitative AI Analyst for Myntra's Wishlist-to-Cart Discovery Engine.
+You synthesize customer intelligence from a 2,065-record research corpus across Reddit, Quora, App Store, Google Play Store, Surveys, and 1-on-1 Interviews.
 
 PROJECT CONTEXT & TAXONOMY:
 - Business Objective: Understand why shoppers save items to their wishlist but fail to purchase them (increasing wishlist-to-cart conversion).
 - 6 Shopper Segments:
-  1. Bargain Hunter (44.9% / 928 signals): Medium-High intent; waits 14-30 days for 40%+ price drops and EORS sales.
-  2. Well-Informed Scholar (35.5% / 734 signals): High intent; blocked by cross-brand sizing variance and lack of unedited daylight customer photos.
-  3. Social Shopper (21.8% / 450 signals): Medium-High intent; relies on peer validation and WhatsApp polls before buying.
+  1. Bargain Hunter (44.9% / 928 signals): Waits 14-30 days for 40%+ price drops and EORS sales.
+  2. Well-Informed Scholar (35.5% / 734 signals): Blocked by cross-brand sizing variance and lack of unedited daylight customer photos.
+  3. Social Shopper (21.8% / 450 signals): Relies on peer validation and WhatsApp polls before buying.
   4. Determined Shopper (18.0% / 372 signals): Very high intent; plans purchases for weddings/vacations; blocked by stockouts.
   5. Impulse Buyer (17.4% / 360 signals): Situational high intent; uses wishlist as a 7-day emotional buffer before checkout.
-  6. Reluctant Shopper (13.0% / 269 signals): Low-Medium intent; overwhelmed by 1,000-item visual clutter and comparison fatigue.
+  6. Reluctant Shopper (13.0% / 269 signals): Overwhelmed by 1,000-item visual clutter and comparison fatigue.
 
-HYPOTHESIS FRAMEWORK (16 HYPOTHESES):
-A. Priority Hypotheses (10 Hypotheses):
-- Genuine-Intent hypothesis: Users add products primarily to bookmark them for later, not because they have immediate purchase intent. A subset represents strong purchase intent and differs from casual saves.
-- Price-Waiting hypothesis: Users wishlist products because they like them but are waiting for a price drop, sale, coupon, or better offer. Current price feels too high.
-- Occasion hypothesis: Users wishlist products for a future occasion/event (weddings, vacations, festivals), so purchase naturally gets delayed.
-- Social-Validation hypothesis: Users save products to discuss/share them with friends or family (e.g. WhatsApp screenshots) before purchasing.
-- Wishlist-Clutter hypothesis: Users accumulate too many wishlisted products, making navigation difficult; too many similar products cause decision paralysis and forgetting.
-- Out-of-Sight hypothesis: Users rarely revisit the wishlist, so products are effectively forgotten after being saved (14–30 day desire decay).
-- Notification-Ineffectiveness hypothesis: Users ignore wishlist notifications because they perceive them as irrelevant, repetitive, or spammy.
-- Real-World-Appearance hypothesis: Users seek photos/videos of the product on real people because catalogue photography doesn't provide enough confidence on fabric opacity and drape.
-- Comparison-Friction hypothesis: Myntra lacks side-by-side spec comparison tools, forcing users to repeatedly open product tabs or switch apps, resulting in evaluation fatigue.
-- Segment-Difference hypothesis: Wishlist behavior, purchase intent, and conversion barriers differ meaningfully across the 6 shopper segments.
-
-B. Emergent Hypotheses (6 Hypotheses):
-- Item-Level Intent hypothesis: Wishlist intent is item-level rather than user-level: the same user saves different items for different reasons (buy later, price waiting, comparison, occasion, inspiration).
-- Converging-Signals hypothesis: Conversion is more likely when multiple conditions align (price drop + need/occasion + size availability + fit confidence).
-- Evidence-Over-Information hypothesis: Users need trusted proof (UGC, unedited photos, peer reviews) rather than just more static catalog specs.
-- Relevance-Over-Size hypothesis: Wishlist size alone does not cause non-conversion; large wishlists become problematic when they reduce relevance and prioritization.
-- Stage-of-Decision hypothesis: Wishlist items span different stages of the purchase funnel (discovery, consideration, validation, near-purchase checkout).
-- Barrier-Specific Intervention hypothesis: The intervention most likely to convert depends on the specific barrier (deal trigger for price-waiting, fit badge for sizing anxiety, comparison matrix for comparison friction).
-
-CRITICAL RULES FOR HYPOTHESIS QUERIES:
-
-1. FULL HYPOTHESIS LIST / TABLE QUERIES:
-   When the user asks to "list all hypotheses", "list all our hypotheses with their validation status", "show hypothesis status", etc.:
-   Output TWO SEPARATE TABLES (Table 1: Priority Hypotheses, Table 2: Emergent Hypotheses):
-
-   ### **Priority Hypotheses**
-   | ID | Hypothesis | Validation Score | Validation Status | Evidence |
-
-   ### **Emergent Hypotheses**
-   | ID | Hypothesis | Validation Score | Validation Status | Evidence |
-
-   RULES FOR THE TWO TABLES:
-   - Rank rows within EACH table from HIGHEST Validation Score -> LOWEST Validation Score (tie-breaker: internal order).
-   - In Table 1 (Priority Hypotheses): Renumber the displayed IDs sequentially as H1, H2, H3, ..., H10 based on ranking position.
-   - In Table 2 (Emergent Hypotheses): Renumber the displayed IDs sequentially as NH1, NH2, NH3, ..., NH6 based on ranking position.
-   - Exact Column Header: | ID | Hypothesis | Validation Score | Validation Status | Evidence |
-   - Validation Status: MUST be one of [SUPPORTED (70–100%), PARTIALLY SUPPORTED (50–69%), NOT SUPPORTED (1–49%), INSUFFICIENT EVIDENCE].
-   - For Notification-Ineffectiveness hypothesis, use "—" for score and "INSUFFICIENT EVIDENCE" for status (ranked at the bottom of Table 1).
-   - Evidence Column: ONE concise, grounded 1–2 sentence statement explaining why the hypothesis received its score/status.
-
-2. NORMAL HYPOTHESIS CONVERSATIONS (NATURAL LANGUAGE):
-   - H1–H10 and NH1–NH6 are internal ranking labels. NEVER require the user to know or ask for H1/H2.
-   - Internally map the user's natural language question to the hypothesis.
-   - In the answer, ALWAYS use the FULL HUMAN-READABLE HYPOTHESIS NAME (e.g. "Price-Waiting Hypothesis" or "Genuine-Intent Hypothesis"), NOT shorthand like "H2" or "H1".
-   - Structure for answering a single hypothesis inquiry:
-     ### **[Full Hypothesis Name]**
-     **Validation Score**: [Score]%
-     **Validation Status**: [SUPPORTED | PARTIALLY SUPPORTED | NOT SUPPORTED | INSUFFICIENT EVIDENCE]
-
-     **Why**:
-     [2–4 concise sentences grounded in the 2,065-record evidence.]
-
-     **Supporting Evidence**:
-     * [brief bullet points with clean platform citations]
-
-3. COMPARATIVE HYPOTHESIS QUERIES:
-   - Compare using FULL human-readable names (e.g. "Price-Waiting Hypothesis (84% — SUPPORTED) vs. Real-World-Appearance Hypothesis (74% — SUPPORTED)").
-   - Never use shorthand like "H2 vs H8" in prose.
-
-4. EMERGENT FINDINGS:
-   - If asked about findings outside existing hypotheses, highlight genuine patterns (such as Competitor Cross-App Price Arbitrage on AJIO/Nykaa [18.9% share / 391 records] or Return Fee Deductions on Google Play).
-
-GENERAL RESPONSE RULES:
-1. Keep answers scannable, concise, and executive-ready.
-2. Clean citations: [Source: Reddit], [Source: Quora], [Source: App Store], [Source: Google Play], [Source: Survey], [Source: Interview].
+EXECUTIVE RESPONSE RULES:
+1. Keep answers scannable, crisp, and executive-ready in 3-4 concise bullet points (max 250 words). Avoid narrative filler.
+2. Clean citations: Always cite sources as [Source: Platform] (e.g. [Source: Reddit], [Source: Quora], [Source: App Store], [Source: Google Play], [Source: Survey], [Source: Interview]).
 3. NEVER output raw UUIDs in visible prose text.
-4. Ground all claims in the 2,065-record corpus.
+4. Ground all claims directly in the 2,065-record research corpus evidence.
 """
+
+HYPOTHESIS_SYSTEM_PROMPT = BASE_SYSTEM_PROMPT + """
+HYPOTHESIS FRAMEWORK (16 HYPOTHESES):
+A. Priority Hypotheses (10): Genuine-Intent, Price-Waiting, Occasion, Social-Validation, Wishlist-Clutter, Out-of-Sight, Notification-Ineffectiveness, Real-World-Appearance, Comparison-Friction, Segment-Difference.
+B. Emergent Hypotheses (6): Item-Level Intent, Converging-Signals, Evidence-Over-Information, Relevance-Over-Size, Stage-of-Decision, Barrier-Specific Intervention.
+
+RULES FOR HYPOTHESIS QUERIES:
+- For single hypothesis: Structure as ### **[Full Hypothesis Name]**, **Validation Score**: [Score]%, **Validation Status**: [SUPPORTED | PARTIALLY SUPPORTED | NOT SUPPORTED | INSUFFICIENT EVIDENCE], **Why** (2-3 sentences), **Supporting Evidence** (bullet points with citations).
+- For "list all hypotheses" or "show hypothesis status": Output TWO tables:
+  ### **Priority Hypotheses**
+  | ID | Hypothesis | Validation Score | Validation Status | Evidence |
+  ### **Emergent Hypotheses**
+  | ID | Hypothesis | Validation Score | Validation Status | Evidence |
+  Rank rows from highest to lowest score. Renumber Priority as H1-H10 and Emergent as NH1-NH6.
+"""
+
+ANSWER_SYSTEM_PROMPT = HYPOTHESIS_SYSTEM_PROMPT
+
+
+def get_system_prompt(query: str) -> str:
+    q_lower = query.lower()
+    if any(k in q_lower for k in ("hypothesis", "hypotheses", "supported", "validation", "nh1", "h1", "h2", "h3", "table")):
+        return HYPOTHESIS_SYSTEM_PROMPT
+    return BASE_SYSTEM_PROMPT
 
 
 class AnswerGenerator:
@@ -141,9 +101,15 @@ class AnswerGenerator:
         """
         start_time = time.time()
 
-        # 1. Retrieve context
+        # 1. Retrieve context (fast-path bypass for static full-table taxonomy requests)
+        q_clean = query.lower().strip()
+        is_full_table_query = any(k in q_clean for k in ("list all hypotheses", "all hypotheses with their validation", "show hypothesis status", "full hypothesis list"))
+
         if context_snippets is None:
-            context_snippets = self.retriever.retrieve(query=query, filter_dict=filter_dict)
+            if is_full_table_query:
+                context_snippets = []
+            else:
+                context_snippets = self.retriever.retrieve(query=query, filter_dict=filter_dict)
 
         formatted_context = self.retriever.format_context_for_llm(context_snippets)
 
@@ -163,12 +129,14 @@ class AnswerGenerator:
             prompt_parts.insert(0, f"### CONVERSATION HISTORY:\n{history_text}\n")
 
         full_prompt = "\n".join(prompt_parts)
+        system_prompt = get_system_prompt(query)
 
         # 3. Call LLM
         response_text = self.llm_client.generate(
             prompt=full_prompt,
-            system_prompt=ANSWER_SYSTEM_PROMPT,
+            system_prompt=system_prompt,
             temperature=self.config.TEMPERATURE,
+            max_output_tokens=500,
             use_cache=True,
         )
 
@@ -245,10 +213,44 @@ class AnswerGenerator:
         filter_dict: Optional[Dict[str, Any]] = None,
     ) -> AsyncGenerator[str, None]:
         start_time = time.time()
+        system_prompt = get_system_prompt(query)
 
-        # 1. Retrieve context
+        # 0. Check stream cache for instant response (<20ms)
+        cache_key = self.llm_client.cache.generate_key(f"STREAM:{system_prompt}:{query}")
+        cached = self.llm_client.cache.get(cache_key)
+        if cached and isinstance(cached, dict) and "text" in cached:
+            cached_text = cached["text"]
+            citations_list = cached.get("citations", [])
+            chunk_size = 40
+            for i in range(0, len(cached_text), chunk_size):
+                yield f"data: {json.dumps({'type': 'token', 'content': cached_text[i:i+chunk_size]})}\n\n"
+
+            meta_payload = {
+                "type": "citation_meta",
+                "citations": citations_list,
+                "relevant_signals_count": cached.get("signals_count", 360),
+                "generation_metadata": {
+                    "retrieved_count": len(citations_list),
+                    "model_name": getattr(self.llm_client, "gemini_model_name", "gemini-3.6-flash"),
+                    "is_hypothesis_test": cached.get("is_hypothesis", False),
+                    "verdict": cached.get("verdict"),
+                    "execution_time_sec": 0.01,
+                    "cached": True,
+                }
+            }
+            yield f"data: {json.dumps(meta_payload)}\n\n"
+            yield "data: [DONE]\n\n"
+            return
+
+        # 1. Retrieve context (fast-path bypass for static full-table taxonomy requests)
+        q_clean = query.lower().strip()
+        is_full_table_query = any(k in q_clean for k in ("list all hypotheses", "all hypotheses with their validation", "show hypothesis status", "full hypothesis list"))
+
         if context_snippets is None:
-            context_snippets = self.retriever.retrieve(query=query, filter_dict=filter_dict)
+            if is_full_table_query:
+                context_snippets = []
+            else:
+                context_snippets = self.retriever.retrieve(query=query, filter_dict=filter_dict)
 
         formatted_context = self.retriever.format_context_for_llm(context_snippets)
 
@@ -269,11 +271,12 @@ class AnswerGenerator:
 
         full_prompt = "\n".join(prompt_parts)
 
-        # 3. Stream incrementally from LLM
+        # 3. Stream incrementally from LLM (capped to max 500 tokens)
         full_text_chunks = []
         async for chunk_text in self.llm_client.stream_generate(
             prompt=full_prompt,
-            system_prompt=ANSWER_SYSTEM_PROMPT,
+            system_prompt=system_prompt,
+            max_output_tokens=500,
         ):
             if chunk_text:
                 full_text_chunks.append(chunk_text)
@@ -320,6 +323,8 @@ class AnswerGenerator:
         is_insufficient = "not contain evidence" in cleaned_text.lower() or "insufficient evidence" in cleaned_text.lower()
         elapsed = round(time.time() - start_time, 2)
 
+        verdict_val = "[Insufficient Evidence]" if is_insufficient and is_hypothesis else "[Evaluated]" if is_hypothesis else None
+
         meta_payload = {
             "type": "citation_meta",
             "citations": citations_list,
@@ -328,10 +333,25 @@ class AnswerGenerator:
                 "retrieved_count": len(context_snippets),
                 "model_name": getattr(self.llm_client, "gemini_model_name", "gemini-3.6-flash"),
                 "is_hypothesis_test": is_hypothesis,
-                "verdict": "[Insufficient Evidence]" if is_insufficient and is_hypothesis else "[Evaluated]" if is_hypothesis else None,
+                "verdict": verdict_val,
                 "execution_time_sec": elapsed,
             }
         }
+
+        # Cache streamed response for instant repeat hits (never cache error strings)
+        if cleaned_text.strip() and not cleaned_text.strip().startswith("[Generation"):
+            self.llm_client.cache.set(
+                cache_key,
+                {
+                    "text": cleaned_text.strip(),
+                    "citations": citations_list,
+                    "signals_count": signals_count,
+                    "is_hypothesis": is_hypothesis,
+                    "verdict": verdict_val,
+                    "timestamp": time.time(),
+                }
+            )
+
         yield f"data: {json.dumps(meta_payload)}\n\n"
         yield "data: [DONE]\n\n"
 

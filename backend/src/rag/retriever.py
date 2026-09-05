@@ -102,7 +102,7 @@ class Retriever:
         if active_scope in ("themes", "both"):
             theme_hits = self.vector_store.search_themes(
                 query=query_vec,
-                top_k=5,
+                top_k=2,
             )
             for hit in theme_hits:
                 hit["item_type"] = "theme_summary"
