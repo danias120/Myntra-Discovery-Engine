@@ -84,7 +84,7 @@ class LLMClient:
         system_prompt: Optional[str] = None,
         json_mode: bool = False,
         temperature: float = 0.1,
-        max_output_tokens: int = 600,
+        max_output_tokens: int = 1500,
         use_cache: bool = True,
         max_retries: int = 5,
     ) -> str:
@@ -133,7 +133,7 @@ class LLMClient:
         system_prompt: Optional[str],
         json_mode: bool = False,
         temperature: float = 0.1,
-        max_output_tokens: int = 600,
+        max_output_tokens: int = 1500,
         max_retries: int = 5,
     ) -> str:
         if not self._gemini_client and GEMINI_API_KEY:
@@ -229,7 +229,7 @@ class LLMClient:
         self,
         prompt: str,
         system_prompt: Optional[str] = None,
-        max_output_tokens: int = 600,
+        max_output_tokens: int = 1500,
         temperature: float = 0.2,
     ) -> AsyncGenerator[str, None]:
         if not self._gemini_client and GEMINI_API_KEY:

@@ -131,12 +131,16 @@ class AnswerGenerator:
         full_prompt = "\n".join(prompt_parts)
         system_prompt = get_system_prompt(query)
 
+        q_clean = query.lower().strip()
+        is_table_or_hyp = any(k in q_clean for k in ("hypothesis", "hypotheses", "table", "status", "list all"))
+        max_tokens = 1500 if is_table_or_hyp else 600
+
         # 3. Call LLM
         response_text = self.llm_client.generate(
             prompt=full_prompt,
             system_prompt=system_prompt,
             temperature=self.config.TEMPERATURE,
-            max_output_tokens=500,
+            max_output_tokens=max_tokens,
             use_cache=True,
         )
 
@@ -271,12 +275,16 @@ class AnswerGenerator:
 
         full_prompt = "\n".join(prompt_parts)
 
-        # 3. Stream incrementally from LLM (capped to max 500 tokens)
+        q_clean = query.lower().strip()
+        is_table_or_hyp = any(k in q_clean for k in ("hypothesis", "hypotheses", "table", "status", "list all"))
+        max_tokens = 1500 if is_table_or_hyp else 600
+
+        # 3. Stream incrementally from LLM
         full_text_chunks = []
         async for chunk_text in self.llm_client.stream_generate(
             prompt=full_prompt,
             system_prompt=system_prompt,
-            max_output_tokens=500,
+            max_output_tokens=max_tokens,
         ):
             if chunk_text:
                 full_text_chunks.append(chunk_text)
