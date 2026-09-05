@@ -1,13 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { 
   CheckCircle2, 
   Sparkles, 
   ThumbsUp, 
   ThumbsDown, 
-  ArrowRight, 
   Users, 
   ChevronDown, 
   ChevronUp, 
@@ -18,7 +16,6 @@ import { SHOPPER_SEGMENTS, ShopperSegment } from "@/lib/data";
 import { fetchThemes, fetchOverviewStats, Theme, OverviewStats } from "@/lib/api";
 
 export default function OverviewPage() {
-  const router = useRouter();
   const [themes, setThemes] = useState<Theme[]>([]);
   const [stats, setStats] = useState<OverviewStats | null>(null);
   const [showAllThemes, setShowAllThemes] = useState(false);
@@ -196,12 +193,12 @@ export default function OverviewPage() {
         {/* Left Column (8 cols): Executive Insights, Themes Detected & Shopper Segments */}
         <div className="col-span-1 lg:col-span-8 flex flex-col gap-8">
           
-          {/* Executive AI Insights Panel */}
+          {/* AI Insights Panel */}
           <section className="bento-card overflow-hidden">
             <div className="p-5 border-b border-white/10 flex justify-between items-center bg-[#2B2B2B]/60">
               <h2 className="font-heading text-lg font-bold text-white flex items-center gap-2">
                 <Sparkles className="h-5 w-5 text-secondary" />
-                Executive AI Insights
+                AI Insights
               </h2>
               {executiveInsights.length > 2 && (
                 <button 
@@ -239,13 +236,6 @@ export default function OverviewPage() {
                       </div>
                       <span className="text-xs text-[#B8B8B8]">{insight.signals}</span>
                     </div>
-                    <button 
-                      onClick={() => router.push(`/reviews?theme=${insight.themeId}`)}
-                      className="h-7 px-3 rounded-lg bg-[#2B2B2B] hover:bg-[#333333] border border-white/10 text-xs font-medium text-white transition-colors flex items-center gap-1"
-                    >
-                      <span>Explore</span>
-                      <ArrowRight className="h-3 w-3" />
-                    </button>
                   </div>
                 </div>
               ))}
@@ -285,8 +275,7 @@ export default function OverviewPage() {
                   return (
                     <div 
                       key={t.theme_id} 
-                      onClick={() => router.push(`/reviews?theme=${t.theme_id}`)}
-                      className="grid grid-cols-12 gap-3 px-5 py-3 hover:bg-[#2B2B2B]/50 transition-colors cursor-pointer items-center text-sm"
+                      className="grid grid-cols-12 gap-3 px-5 py-3 hover:bg-[#2B2B2B]/30 transition-colors items-center text-sm"
                     >
                       <div className="col-span-1 text-xs text-[#B8B8B8] font-mono">{idx + 1}</div>
                       <div className="col-span-5 font-medium text-white pr-2 truncate">
@@ -507,14 +496,13 @@ export default function OverviewPage() {
               {actionableInsights.slice(0, 3).map((insight, idx) => (
                 <div 
                   key={idx}
-                  onClick={() => router.push(`/reviews?theme=${insight.theme_id}`)}
-                  className="flex justify-between items-center p-2.5 rounded-lg bg-[#2B2B2B] hover:bg-[#333333] border border-white/5 transition-colors cursor-pointer group"
+                  className="flex justify-between items-center p-2.5 rounded-lg bg-[#2B2B2B] border border-white/5"
                 >
                   <div className="flex items-center gap-2 max-w-[72%]">
                     <span className="w-5 h-5 rounded-full bg-white/10 text-white flex items-center justify-center text-[10px] font-mono font-bold flex-shrink-0">
                       {idx + 1}
                     </span>
-                    <span className="text-xs text-white font-medium group-hover:text-secondary transition-colors line-clamp-2">
+                    <span className="text-xs text-white font-medium line-clamp-2">
                       {insight.name}
                     </span>
                   </div>
